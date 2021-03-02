@@ -17,12 +17,14 @@ body{
     margin-left: 2px;
 }
 
-.link_style{
-    color: cornsilk;
+.menu-mobile-icon{
+    color: rgb(243, 162, 86)  !important;
+    --color:  rgb(243, 162, 86)  !important;
 }
 
+
 .link_style:hover{
-    color: cornsilk;
+    color: rgb(243, 162, 86);
 }
 
 .logo {
@@ -39,3 +41,29 @@ body{
     outline: none;
 }
 
+.user-menu{
+    background-color: rgba(0, 0, 0, .15);
+    color: cornsilk;
+}
+
+.link_style{
+    color: cornsilk;
+    transition-duration: .5s;
+}
+
+.dropdown-menu .nav-item:hover{
+    background-color: rgba(0, 0, 0, .15);
+}
+
+.icon-base-size{
+    width: 32px;
+    height: 32px;
+} 
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.icons-navbar{ 
+    display:inline-block;
+} 

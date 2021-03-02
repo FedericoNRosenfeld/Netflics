@@ -1,17 +1,18 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Netflics</title>    
-    <link rel="icon" href="images/logo_s.png">
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  
+  <!-- Browser Title -->
+  <title>Netflics</title>    
+  <link rel="icon" href="images/logo_s.png">
 
 </head>
 <body>
@@ -22,10 +23,10 @@
       <!-- Icono modificado de: https://www.flaticon.es/-->
       <a class="navbar-brand link_style" href="#"><img src="images/logo.png" alt="Netflics" ></a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <!-- icono menu para cuando cambias a dispositivo movil. -->
-        <ion-icon name="menu-outline"></ion-icon>
+        <ion-icon name="menu-outline" class="menu-mobile-icon"></ion-icon>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -35,14 +36,42 @@
             <a id="nav_Home" class="nav-link link_style" href="#">Inicio <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item item-space">
-            <a id="nav_Productos" class="nav-link link_style" href="#">Series</a>
+            <a id="nav_Series" class="nav-link link_style" href="#">Series</a>
           </li>
           <li class="nav-item item-space">
-            <a id="nav_QuienesSomos" class="nav-link link_style" href="#">Peliculas</a>
+            <a id="nav_Peliculas" class="nav-link link_style" href="#">Peliculas</a>
           </li>
           <li class="nav-item item-space">
-            <a id="nav_Contacto" class="nav-link link_style" href="#">Mis Favoritos</a>
+            <a id="nav_favoritos" class="nav-link link_style" href="#">Mis Favoritos</a>
           </li>         
+        </ul>
+      </div>
+      <div class="left-icons-navbar ">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item item-space  " id="no_notifications">
+            <a class="navbar-brand link_style"  href="#"><img class="icon-base-size" src="images/notification_no.png" alt="Notificaciones" ></a>
+          </li>
+          <li class="nav-item item-space  " id="with_notifications">
+            <a class="navbar-brand link_style"  href="#"><img class="icon-base-size" src="images/notification_yes.png" alt="Notificacion_activa" ></a>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="link_style nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="icon-base-size" src="images/user_profile_empty.png" alt="Usuario" >     
+            </a>
+  
+            <div class="dropdown-menu user-menu" aria-labelledby="navbarDropdown">
+              <a class="nav-item dropdown-item link_style" href="#">Perfil</a> 
+              <a class="nav-item dropdown-item link_style" href="#">Configuracion</a> 
+              <div class="dropdown-divider"></div>
+              <a class="nav-item dropdown-item link_style" href="#">Centro de ayuda</a> 
+              <div class="dropdown-divider"></div>
+              <a class="nav-item dropdown-item link_style" href="#">Cerrar sesion</a> 
+            </div>
+                         
+          </li> 
+         
         </ul>
         <!-- Barra de busqueda 
         <form class="form-inline my-2 my-lg-0">
@@ -54,8 +83,15 @@
     </div> <!-- container -->
   </nav>
 
+  <!-- custom script -->
+  <script src="js/scripts.js"></script>
 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+  <!-- bootstrap and jquery-->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!--IonicIcons https://ionicons.com/usage -->
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
 </body>
 </html>
