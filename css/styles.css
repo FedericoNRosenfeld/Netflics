@@ -1,0 +1,41 @@
+
+/* general content */
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: black;
+}
+
+/* navbar */
+.navbar{
+    background-color: rgb(27, 12, 2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
+    min-height: 70px;
+    color: cornsilk;
+}
+
+.item-space{
+    margin-left: 2px;
+}
+
+.link_style{
+    color: cornsilk;
+}
+
+.link_style:hover{
+    color: cornsilk;
+}
+
+.logo {
+    min-width: 32px;
+    max-width: 80px;
+}
+
+.navbar-toggler {
+    font-size: 40px;
+}
+
+/* remove border when focus any button in the navbar*/
+.navbar-toggler:focus {
+    outline: none;
+}
+

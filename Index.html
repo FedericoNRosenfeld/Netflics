@@ -2,16 +2,57 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Netflics</title>
+    <title>Netflics</title>    
+    <link rel="icon" href="images/logo_s.png">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+
 </head>
 <body>
 
-    <h1> Hello World</h1>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+
+      <!-- Icono modificado de: https://www.flaticon.es/-->
+      <a class="navbar-brand link_style" href="#"><img src="images/logo.png" alt="Netflics" ></a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- icono menu para cuando cambias a dispositivo movil. -->
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <!-- mr-auto botones lado izquierdo, ml-auto botones lado derecho-->
+          <li class="nav-item item-space active">
+            <a id="nav_Home" class="nav-link link_style" href="#">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item item-space">
+            <a id="nav_Productos" class="nav-link link_style" href="#">Series</a>
+          </li>
+          <li class="nav-item item-space">
+            <a id="nav_QuienesSomos" class="nav-link link_style" href="#">Peliculas</a>
+          </li>
+          <li class="nav-item item-space">
+            <a id="nav_Contacto" class="nav-link link_style" href="#">Mis Favoritos</a>
+          </li>         
+        </ul>
+        <!-- Barra de busqueda 
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        -->
+      </div>
+    </div> <!-- container -->
+  </nav>
 
 
     <script src="js/bootstrap.min.js"></script>
