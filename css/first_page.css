@@ -10,17 +10,15 @@ body{
 }
 .big_logo_container{
     position: relative;
-    margin-left: 5%;
-    margin-top: 1%;
+    margin-left: 50px;
+    margin-top: 50px;
 
 }
+
 .message_suscription{
     color: rgba(235, 139, 15, 0.767);
 }
 
-.btn_container{
-    margin-top: 20%;
-}
 .presentation{
     position: relative;
     margin-left: 5%;
@@ -37,7 +35,8 @@ body{
 
 .list_series_box{
     position: relative;
-    margin-top: 5%;
+    margin: 5%;
+
     padding-bottom: 2%;
     background-image: linear-gradient(to right, black, black,   rgb(235, 140, 15), rgb(235, 140, 15, 0));
     color: rgb(235, 140, 15) ;
@@ -49,11 +48,13 @@ body{
 
 .show_box{
     z-index: 1;
-    position: relative;
-    width:150px;
-    height: 87px;
+    position: relative; 
+    width: auto;
+    height: auto;
     background-image: linear-gradient(to right, black, rgb(68, 62, 62),   rgb(235, 140, 15));
-    padding: 4%;    
+    padding: 4%;
+    margin-bottom: 2%;    
+    border-radius: 10px;
     transition: width 1s, height 1s;
 
 }
@@ -61,13 +62,13 @@ body{
 .presentation_img{
     max-width: auto;
     max-height: auto;
-
 }
  
 .show_box:hover {
     z-index: 2;
-    width: 300px;
-    height: 100%;  
+    width: 150%;
+    height: 100%;
+
 }
 
 
@@ -75,12 +76,21 @@ body{
     background-color: rgba(0, 0, 0, .7);
     color: rgb(235, 140, 15);
     font-size: 12px;
-    border: 1px solid 
+    border: 1px solid; 
+    border-radius: 8px;
+    margin-right: 50px;
 }
 
 .btn_reg{
     background-color: rgba(235, 140, 15, .7);
     color: black;
     font-size: 24px;
-    border: 1px solid 
+    border: 1px solid;
+    border-radius: 8px;
+    margin-bottom: 50px;
+
+}
+
+.btn_container{
+    margin-top: 50px;
 }
