@@ -53,18 +53,19 @@ body{
     width:150px;
     height: 87px;
     background-image: linear-gradient(to right, black, rgb(68, 62, 62),   rgb(235, 140, 15));
-    padding: 4%;
+    padding: 4%;    
+    transition: width 1s, height 1s;
+
 }
 
 .presentation_img{
     max-width: auto;
     max-height: auto;
-    transition: width 1s, height 1s;
 
 }
-.show_box:hover{
+ 
+.show_box:hover {
     z-index: 2;
-
     width: 300px;
     height: 100%;  
 }

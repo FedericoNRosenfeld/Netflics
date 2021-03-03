@@ -41,16 +41,6 @@ img {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 1px;
-  width: 100%;
-  text-align: center;
-}
 
 /* The dots/bullets/indicators */
 .dot {
@@ -68,8 +58,9 @@ img {
 
 /* Fading animation */
 .fade {
+  animation: fade 1.5s forwards;  
   -webkit-animation: fade 1.5s forwards;
-  animation: fade 1.5s forwards;
+
 }
 
 @-webkit-keyframes fade {
