@@ -1,0 +1,45 @@
+
+body{
+    background: black;
+    color: white;
+}
+
+.show_title{
+    position: relative;
+    margin: auto;
+    margin-top: 5%;
+    width: 50%;
+}
+
+.show_resumen_pause{
+    position: relative;
+    max-width: 40%;
+    margin-left: 2%;
+}
+
+.clasification_age{
+    position: absolute;
+    margin-left: 2%;
+
+    text-size-adjust: auto;
+    font-size: 16px;
+}
+
+.icon_age{
+    width: 24px;
+    height: 24px;
+    margin-left: 3px;
+}
+
+.desc_age{
+    margin-left: 25px;
+    margin-top: -22px;
+}
+
+.box_age{
+    border: solid 2px orangered;
+    margin-left: -23px;
+    margin-top: -44px;
+    width: 170px;
+    height: 30px;
+}
