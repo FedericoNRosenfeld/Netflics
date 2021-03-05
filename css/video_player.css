@@ -1,0 +1,150 @@
+
+body{
+    background: black;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+ /*#region loading page */
+.show_title{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading_video {
+    border: 16px solid #331e0780;
+    border-radius: 50%;
+    border-top: 16px solid #f07808;
+    border-left: 16px solid #f07808; ;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+ 
+/*#endregion */
+
+/*#region  warning age requeriment*/
+.warning_age{
+    position: relative;
+    margin-left: 2%;
+    margin-top: 2%;
+    text-size-adjust: auto;
+    font-size: 16px;
+}
+
+.box_age{
+    border: solid 2px orangered;
+    width: 170px;
+    height: 30px;
+}
+.icon_age{
+    width: 24px;
+    height: 24px;
+    margin-left: 3px;
+}
+
+.desc_age{
+    margin-left: 35px;
+    margin-top: -25px;
+}
+/*#endregion*/
+
+/*#region pause-video*/
+.logo_container{
+    position: relative;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.show_resumen_pause{
+    z-index: 1;
+    position: fixed;
+    overflow: auto;
+    padding: 2%;
+    top: 25%;
+    margin-left: 1%;
+    min-width: 300px;
+    max-width: 30%;
+    max-height: 350px;
+}
+
+/*#endregion*/
+.bottom_screen{ 
+    z-index: 2;
+    position: absolute;
+    padding-right: 1%; 
+    padding-left: 1%; 
+    width: 100%;
+    overflow:auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top: solid 1px white;
+    color: white;   
+    bottom: 0; 
+    top: 85%;
+ }
+/*#region Progresion Bar and Time*/
+
+.video_progresion{
+    margin-top: 10px;
+}
+.progressbar_container{
+    position: relative;
+    background-color:#442c08dc!important; 
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.progressbar_time{
+    position: relative;
+    float: right;
+}
+
+.progressbar{
+    background-color:#e68f0e!important;
+    padding: 1px; 
+    height:14px;
+    width:0%;
+}
+/*#endregion*/
+
+/*#region Video control */
+
+
+.invert_color{
+    filter: invert(1);
+}
+
+.show_box{
+    width: 5vh;
+    height: 5vh;
+    margin-left: 10px;
+    float: left;
+}
+
+.imge{
+    width: 100%;
+    height: 100%;    float: left;
+
+}
+
+.s_padding{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+/*#endregion*/
+
+

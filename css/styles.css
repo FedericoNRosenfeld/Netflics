@@ -7,6 +7,13 @@ body{
 img{
     border-radius: 8px;
 }
+
+p{
+    margin-bottom:0%;
+}
+
+
+
 /* navbar */
 .navbar_custom{
     background-color: rgb(27, 12, 2);
@@ -66,6 +73,39 @@ img{
     display: block;
 }
 
-.icons-navbar{ 
+.icons-li{ 
     display:inline-block;
 } 
+
+.center{
+    text-align: center;
+}
+
+.center_div_screen{
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
+
+.hide_element{
+    display: none;
+}
+
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    div.textAuto {
+      font-size: 16px;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    div.textAuto {
+      font-size: 14px;
+    }
+  }
