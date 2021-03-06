@@ -1,6 +1,6 @@
 
 
-notifications_handler(false);
+//notifications_handler(false);
 
 
 function notifications_handler(notifications){
@@ -15,3 +15,5 @@ function notifications_handler(notifications){
             wn.style.display = "none";
     }
 }
+
+

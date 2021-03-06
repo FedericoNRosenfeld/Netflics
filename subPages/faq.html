@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+  <link href="../css/home.css" rel="stylesheet">
+
+  <!-- Browser Title -->
+  <title>Netflics</title>    
+  <link rel="icon" href="../images/logo_s.png">
+
+</head>
+<body>
+
+
+
+<nav class="navbar navbar_desktop navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xl">
+    <div class="container remove_empty_spaces " >
+        <!-- Icono modificado de: https://www.flaticon.es/-->
+        <a class="navbar-brand link_style" href="#"><img src="../images/logo.png" alt="Netflics" ></a>
+ 
+        <div class="collapse navbar-collapse" >
+            <ul class="navbar-nav mr-auto">
+                <!-- mr-auto botones lado izquierdo, ml-auto botones lado derecho-->
+                <li class="nav-item item-space active">
+                <a id="nav_Home" class="nav-link link_style textAuto" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item item-space">
+                <a id="nav_Series" class="nav-link link_style textAuto" href="#">Series</a>
+                </li>
+                <li class="nav-item item-space">
+                <a id="nav_Peliculas" class="nav-link link_style textAuto" href="#">Peliculas</a>
+                </li>
+                <li class="nav-item item-space">
+                <a id="nav_favoritos" class="nav-link link_style textAuto" href="#">Mis Favoritos</a>
+                </li>         
+            </ul>
+        </div>
+
+
+        <div class="content_right ">
+            <ul>
+              
+            
+                <!-- User -->
+                <li class="icons-li m_rightSide">               
+                    <div class="desktop_user dropdown" style="float:right;">
+                        <a class="icons-li nav-link dropdown-toggle dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="usr_img" class="icon-base-size" src="../images/user_profile_empty.png" alt="Usuario" >     
+                        </a>
+                        <div class="dropdown">
+                            <div id="myDropdown" class="dropdown-content">
+                                <div class="user_ctrl_box">
+                                    <a class="icons-li  link_style " href="#">Perfil</a> 
+                                    <a class="icons-li  link_style " href="#">Configuracion</a> 
+                                    <div class="dropdown-divider "></div>
+                                    <a class="icons-li  link_style " href="#">Centro de ayuda</a> 
+                                    <div class="dropdown-divider "></div>
+                                    <a class="icons-li link_style " href="#">Cerrar sesion</a> 
+                                </div>   
+                            </div>
+                        </div>                             
+                    </div>                                                     
+                </li>
+                
+                <!-- Notifications -->  
+                <li class="icons-li item-space m_rightSide">
+                    <div class="desktop_notifications">
+                        <a id="notif_off" class="notif_img_d link_style"  href="#"><img  id="notif_img_off_d"class=" notif_img icon-base-size" src="../images/notification_no.png" alt="Notificaciones" ></a>
+                        <a id="notif_on" class="notif_img_d  link_style hide_element"  href="#"><img id="notif_img_on_d" class="notif_img icon-base-size" src="../images/notification_yes.png" alt="Notificacion_activa" ></a>
+                    </div>
+                </li>
+
+                  <!-- Search Bar-->
+
+                <li class="icons-li item-space m_rightSide ">
+                    <div class="desktop_search" >
+                        <form action="" class="search-form" >
+                            <div class="form-group has-feedback ">
+                                <label for="search" class="sr-only">Search</label>
+                                <div class=" form-control-feedback ">              		
+                                    <span class="glyphicon "><img id="search_icon" class="search_icon  glyphicon" src="../images/search.png" alt="Notificacion_activa" > </span>                                                 
+                                </div>                            
+                                <input type="text" class="form-control" name="search" id="search" placeholder="buscar">
+                            </div>
+                        </form>                  
+                    </div>                 
+                </li>
+                
+            </ul>
+        </div>
+    </div> <!-- container -->
+    
+</nav>
+
+<!-- Mobile Top -->
+<div class=" navbar_desktop mobile_logo_user_section">
+        <div class="">                
+            <ul class="">
+                <li class="icons-li item-space "> 
+                    <div class="mobile_logo">
+                        <a id="logo_m" class=" link_style" href="#"><img src="../images/logo.png" alt="Netflics" ></a>
+                        <a id="logo_s" class=" link_style" href="#"><img id="logo_s_img" src="../images/logo_s.png" alt="Netflics"></a>
+                    </div>
+                </li>
+
+               
+                <!-- User -->
+                <li class="icons-li m_rightSide">               
+                    <div class="mobile_user dropdown" style="float:right;">
+                        <a class="icons-li nav-link dropdown-toggle dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="usr_img" class="icon-base-size" src="../images/user_profile_empty.png" alt="Usuario" >     
+                        </a>
+                        <div class="dropdown">
+                            <div id="myDropdown" class="dropdown-content">
+                                <div class="user_ctrl_box">
+                                    <a class="icons-li  link_style " href="#">Perfil</a> 
+                                    <a class="icons-li  link_style " href="#">Configuracion</a> 
+                                    <div class="dropdown-divider "></div>
+                                    <a class="icons-li  link_style " href="#">Centro de ayuda</a> 
+                                    <div class="dropdown-divider "></div>
+                                    <a class="icons-li link_style " href="#">Cerrar sesion</a> 
+                                </div>   
+                            </div>
+                        </div>                             
+                    </div>                                                     
+                </li>   
+                
+                <!-- Notifications -->
+                <li class="icons-li item-space m_rightSide">
+                    <div class="mobile_notifications">
+                        <a id="notif_off" class="navbar-brand link_style"  href="#">
+                            <img  id="notif_img_off_m" class=" notif_img icon-base-size" src="../images/notification_no.png" alt="Notificaciones" >
+                        </a>
+                        <a id="notif_on" class="navbar-brand link_style hide_element"  href="#">
+                            <img id="notif_img_on_m" class=" notif_img icon-base-size" src="../images/notification_yes.png" alt="Notificacion_activa" >
+                        </a>
+                    </div>
+                </li>               
+
+            </ul>
+        </div>
+
+</nav>
+
+
+
+
+<div class="navbar_mobile">Mobile navbar</div>
+
+  <!-- custom script -->
+  <script src="../js/scripts.js"></script>
+
+  <!-- bootstrap and jquery-->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+  <!--IonicIcons https://ionicons.com/usage -->
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+</body>
+</html>
