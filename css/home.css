@@ -1,157 +1,31 @@
 
-@media(min-width: 1000px) {
+@media(min-width: 799px) {
     .navbar_desktop {
         display: block;
     }
-    .mobile_logo_user_section{
+
+    .logo_top_center{
         display: none;
     }
 
     .navbar_mobile{
         display: none;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: red;
-        color: white;
-        text-align: center;    
-        min-width: 217px;     
-    }  
-
+    }
    
 }
 
 
-@media(max-width: 1000px) {
+@media(max-width: 799px) {
     .navbar_desktop {
         display: none;
     }
-    .mobile_logo_user_section{
+
+    .logo_top_center{
         display: block;
     }
 
     .navbar_mobile{
         display: block;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: red;
-        color: white;
-        text-align: center;
         
     }
-    .notif_img{
-        margin-top: 5px;
-    }
-    #usr_img {
-        margin-top: 3px;
-    }
-
 }
-
-
-
-
-.mobile_logo_user_section{
-    position: fixed;
-    width: 100%;
-    min-width: 217px;
-}
-
-.mobile_logo{
-    position: relative;
-    margin-top: 20px;
-  
-}
-
-
-.m_rightSide{
-    position: relative;
-    float: right;
-    margin-top: 10px;
-}
-
-
-@media(max-width: 376px) {
-
-    #logo_m{
-        display: none;
-    }
-
-    #logo_s{
-        display: block;
-    }
-    
-    #logo_s_img, .notif_img, #usr_img {
-        width: 32px;
-        height: auto;
-    }
-    #usr_img {
-        margin-top: 3px;
-    }
-
- 
-
-}
-
-@media(min-width: 376px) {
-
-    #logo_m{
-        display: block;
-    }
-
-    #logo_s{
-        display: none;
-    }
-
-}
-
-
-/* --------------------------- */ 
-
-
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 22px;
-    background-color: #f09711;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgb(236, 144, 22);
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  
