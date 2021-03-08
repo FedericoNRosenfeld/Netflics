@@ -11,6 +11,9 @@ p{
     margin-bottom:0%;
 }
 
+.inLine{
+    display: inline;
+}
 
 
 /* navbar */
@@ -85,7 +88,7 @@ p{
 
 
 .link_style{
-    color: cornsilk;
+    color: white;
     transition-duration: .5s;
 }
 

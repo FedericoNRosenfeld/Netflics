@@ -17,3 +17,8 @@ function notifications_handler(notifications){
 }
 
 
+document.getElementById("search_icon_mobile").addEventListener('click', function(e) {
+console.log(document.getElementById("search_mobile_screen").classList);
+    $("#search_mobile_screen" ).toggleClass("hide_element");  
+    console.log(document.getElementById("search_mobile_screen").classList);
+});
