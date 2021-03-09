@@ -18,9 +18,7 @@ function notifications_handler(notifications){
 
 
 document.getElementById("search_icon_mobile").addEventListener('click', function(e) {
-console.log(document.getElementById("search_mobile_screen").classList);
     $("#search_mobile_screen" ).toggleClass("hide_element");  
-    console.log(document.getElementById("search_mobile_screen").classList);
 });
 
 
@@ -44,7 +42,6 @@ function createVideoWindow(id){
 
 $(document).ready(function(){
     $(".box_expand").hover(function(){
-        console.log(this.id);
         document.getElementById(this.id).addEventListener("mouseenter", createVideoWindow(this.id));
         
     })});
@@ -68,7 +65,7 @@ function makeListOfVideos(i, id) {
     
     let img = document.createElement('img');
     img.className = "img-fluid icons-li video_img";
-    img.src="../images//presentations/"+listData[Math.floor(Math.random() * 2)] +""+( Math.floor(Math.random() * 7)) +".png";
+    img.src="images/presentations/"+listData[Math.floor(Math.random() * 2)] +""+( Math.floor(Math.random() * 7)) +".png";
     img.id = "video_img_"+i + prefix;
 
 
@@ -122,19 +119,4 @@ generateFreeContent(15, "acategory");
 
 generateFreeContent(22, "bcategory");
 
-// Related LogIn 
-$("#logIn_btn").click(function(){
 
-    //$("#nt_off").toggleClass("hide_element");
-    $("#nt_spiner").toggleClass("hide_element");
-    setTimeout(function(){
-        $("#nt_spiner").toggleClass("hide_element");
-        $("#nt_off").toggleClass("hide_element");
-        $("#nt_logo").toggleClass("hide_element"); 
-        
-    }, 3000);
-    setTimeout(function(){
-        window.location.href = "home.html";
-    }, 4000);
-
-});

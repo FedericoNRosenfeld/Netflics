@@ -1,6 +1,7 @@
 /* general content */
 body{
     font-family: 'Lato', sans-serif;
+    background: black;
 }
 
 p{
@@ -10,7 +11,7 @@ p{
 
 .inLine{
     display: inline;
-
+}
 .img_radius{
     border-radius: 8px;
 }
