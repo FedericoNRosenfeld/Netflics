@@ -124,9 +124,6 @@ ul {
 /*#region Video control */
 
 
-.invert_color{
-    filter: invert(1);
-}
 
 .show_box{
     width: 5vh;
