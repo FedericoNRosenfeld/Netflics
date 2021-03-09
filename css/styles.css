@@ -145,6 +145,19 @@ p{
   }
 
   
+
+  @media screen and (max-width: 400px) {
+    .text_submenu {
+        font-size: 12px
+    }
+  }
+
+
+.menu_section{
+    padding-bottom: 10px;
+}
+
+
 .invert_color{
     filter: invert(1);
 }
@@ -277,6 +290,4 @@ p{
 }
   
 
-.huerotate:hover{
-    filter: hue-rotate(180deg);
-} 
+

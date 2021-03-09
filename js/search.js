@@ -125,15 +125,15 @@ function makeListOfVideos(amount, id) {
         icon2.name = "volume-mute-outline";
 
         let icon3 = document.createElement('ion-icon');
-        icon3.name = "chatbubbles-outline";
-
-        let icon4 = document.createElement('ion-icon');
-        icon4.name = "add-circle-outline";
+        icon3.name = "add-circle-outline";
      
+        let icon4 = document.createElement('ion-icon');
+        icon4.name = "information-circle-outline";
+
+        
         let dctrl = document.createElement('div');
         dctrl.className = "video_ctrl hide_element";
         dctrl.id = "video_ctrl_num"+i + prefix;
-
 
         let ddesc = document.createElement('div');
         ddesc.className = "video_desc hide_element";
@@ -157,9 +157,13 @@ function makeListOfVideos(amount, id) {
     
 }
 
+function generateFreeContent( totalElements, id ){
+    makeListOfVideos(totalElements, id);
+    
+}
 
 
- makeListOfVideos(16, "searchList"); 
- makeListOfVideos(12, "recomendedList"); 
- makeListOfVideos(8, "fridayList"); 
+generateFreeContent(16, "searchList"); 
+generateFreeContent(12, "recomendedList"); 
+generateFreeContent(8, "fridayList"); 
 
