@@ -13,6 +13,7 @@
   <link href="../css/first_page.css" rel="stylesheet">
   <link href="../css/carousel.css" rel="stylesheet">
   <link href="../css/styles.css" rel="stylesheet">
+  <link href="../css/login_register.css" rel="stylesheet">
 
   <!-- Browser Title -->
   <title>Netflics</title>    
@@ -22,15 +23,15 @@
 <body>
 
 <!-- Icon and LogIn button -->
-    
+
 <div class="row">
     <div class=" big_logo_container"> 
-        <a class=" link_style" href="#"><img src="../images/logo.png" alt="Netflics" ></a>
+        <a class=" link_style" href="#"><img src="../images/logo.png" alt="Netflics"  class="big_logo"></a>
     </div>
 
     <div class="ml-auto">        
         <div class="btn_container">
-            <button class="btn btn_log"> Iniciar Sesion</button>
+            <button class="btn btn_log"> <a href="#signupModal" data-toggle="modal" class="nav-link" style="color: orange;">Iniciar Sesion</a> </button>
         </div>              
     </div> 
 </div>
@@ -45,7 +46,7 @@
                 <h3> Explora mundos diferentes, sin la necesidad de moverte</h1>
 
                 <div class="btn_container">
-                    <button class="btn btn_reg"> Registrarse</button>
+                    <button class="btn btn_reg">Suscribirse</button>
                 </div>
             </div>
         </div>
@@ -79,8 +80,8 @@
 
                     </div>
 
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <a class="prev" onclick="plusSlides(-1)"><ion-icon name="chevron-back-outline"></ion-icon></a>
+                    <a class="next" onclick="plusSlides(1)"><ion-icon name="chevron-forward-outline"></ion-icon></a>
                   
                   </div>
                   
@@ -199,13 +200,68 @@
 
 <div class="generate_space_sm"></div>
 
-  <!-- custom script -->
-  <script src="../js/carousel.js"></script>
+
+
+<div class="container login_form_container modal" id="signupModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="d-flex justify-content-center modal-dialog">
+        <div class="card_login modal-content">
+            <div class="card-header center">
+                <h3> Iniciar Sesion </h3>
+            </div>
+            <div class="card-body center">
+                <form>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><ion-icon name="person-outline" class="icon_effect"></ion-icon></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email">
+                        
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><ion-icon name="lock-closed-outline" class="icon_effect"></ion-icon></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Contrase&ntilde;a">
+                    </div>
+                    <div class="row align-items-center remember_box">
+                        <input type="checkbox"> <label class="text_remember">Recordarme</label>
+                    </div>
+                    <div class="form-group">
+                        <input  id="logIn_btn"value="Ingresar" class="btn login_btn">
+                    </div>
+                </form>
+                <div class="nt_screen">
+                    <div class="nt_outside">
+                        <img src="../images/nt_login/nt_screen_off.png" class="img-fluid  " id="nt_off" >
+                        <div class="nt_spiner hide_element" id="nt_spiner"></div>
+                        <img src="../images/nt_login/nt_screen_logo.png" class="img-fluid nt_login hide_element "  id="nt_logo">
+
+                    </div>         
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    ¿No posees una cuenta?<a href="#">Suscribete Aqui</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#">¿Necesitas ayuda?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
 
   
   <!-- bootstrap and jquery-->
   <script src="../js/jquery-3.6.0.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
+
+   <!-- custom script -->
+   <script src="../js/scripts.js"></script>
+   <script src="../js/carousel.js"></script>
 
   <!--IonicIcons https://ionicons.com/usage -->
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
