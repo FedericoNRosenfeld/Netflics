@@ -13,69 +13,79 @@
   <title>Netflics</title>    
   <link rel="icon" href="../images/logo_s.png">
 
+  <link href="../css/styles.css" rel="stylesheet">
+  <link href="../css/login_register.css" rel="stylesheet">
+
 </head>
 <body>
+    <a href="#signupModal" data-toggle="modal"> 
+        Sign-Up 
+      </a> 
 
-
-<div class="form_logIn_container">
-    <div class="form_login">
-        <div class="container ">
-            <p class="center"> Iniciar Sesion en Netflics</p> 
-            <form class="needs-validation" novalidate>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="uname" placeholder="Ingresar el mail o el usuario" name="uname" required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Ingresar la Contrase&ntilde;a" name="pswd" required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                </div> 
-                <div class="center">
-                    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
-                </div>       
-            </form>
-        </div>
-        <div class="container center">
-            <div class="register_offer">
-                <p> No posee usuario? Vea alguno de nuestro planes </p> 
-    
-                <div class="show_planes">
-                    <p> agregar planes aqui</p>
-                </div>
-    
+<div class="container login_form_container " id="signupModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="d-flex justify-content-center modal-dialog">
+        <div class="card_login modal-content">
+            <div class="card-header center">
+                <h3> Iniciar Sesion </h3>
             </div>
+            <div class="card-body center">
+                <form>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><ion-icon name="person-outline" class="icon_effect"></ion-icon></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email">
+                        
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><ion-icon name="lock-closed-outline" class="icon_effect"></ion-icon></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Contrase&ntilde;a">
+                    </div>
+                    <div class="row align-items-center remember_box">
+                        <input type="checkbox"> <label class="text_remember">Recordarme</label>
+                    </div>
+                    <div class="form-group">
+                        <input  id="logIn_btn"value="Ingresar" class="btn login_btn">
+                    </div>
+                </form>
+                <div class="nt_screen">
+                    <div class="nt_outside">
+                        <img src="../images/nt_login/nt_screen_off.png" class="img-fluid  " id="nt_off" >
+                        <div class="nt_spiner hide_element" id="nt_spiner"></div>
+                        <img src="../images/nt_login/nt_screen_logo.png" class="img-fluid nt_login hide_element "  id="nt_logo">
+
+                    </div>         
+                </div>
+            </div>
+
             
+            
+
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    ¿No posees una cuenta?<a href="#">Suscribete Aqui</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#">¿Necesitas ayuda?</a>
+                </div>
+            </div>
         </div>
-    
     </div>
 </div>
+<!-- custom script -->
+
+  
+<!-- bootstrap and jquery-->
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script src="../js/scripts.js"></script>
+
+
+<!--IonicIcons https://ionicons.com/usage -->
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
 </body>
-<style>
-
-.form_login{
-    position: relative;
-    background-color:rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    color: white;
-    max-width: 30%;
-    margin-left: 35%;   
-    margin-right: 35%;     
-    font-size: 21px;
-}
-
-.center{
-    text-align: center;
-}
-
-.register_offer{
-    margin-top: 6%;
-    font-size: 11px;
-}
-
-</style>
-
-
 </html>

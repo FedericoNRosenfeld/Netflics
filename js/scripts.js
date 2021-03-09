@@ -1,7 +1,7 @@
 
 
-//notifications_handler(false);
 
+//notifications_handler(false);
 
 function notifications_handler(notifications){
     let nn = document.getElementById("no_notifications");
@@ -53,7 +53,7 @@ $(document).ready(function(){
 let listData = ['m','s']; 
 
 
-// Items generator
+// Video items generator 
 function makeListOfVideos(i, id) {
  
 
@@ -121,3 +121,20 @@ function generateFreeContent( totalElements, id ){
 generateFreeContent(15, "acategory");
 
 generateFreeContent(22, "bcategory");
+
+// Related LogIn 
+$("#logIn_btn").click(function(){
+
+    //$("#nt_off").toggleClass("hide_element");
+    $("#nt_spiner").toggleClass("hide_element");
+    setTimeout(function(){
+        $("#nt_spiner").toggleClass("hide_element");
+        $("#nt_off").toggleClass("hide_element");
+        $("#nt_logo").toggleClass("hide_element"); 
+        
+    }, 3000);
+    setTimeout(function(){
+        window.location.href = "home.html";
+    }, 4000);
+
+});

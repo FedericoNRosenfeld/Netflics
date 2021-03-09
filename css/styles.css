@@ -1,18 +1,18 @@
 /* general content */
 body{
     font-family: 'Lato', sans-serif;
-    background-color: black;
-}
-img{
-    border-radius: 8px;
 }
 
 p{
     margin-bottom:0%;
 }
 
+
 .inLine{
     display: inline;
+
+.img_radius{
+    border-radius: 8px;
 }
 
 
@@ -116,13 +116,12 @@ p{
 }
 
 .center_div_screen{
-    position: absolute;
+    position: fixed;
     top: 50%;
-    left: 49%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 100px;
-    height: 100px;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  
 }
 
 .hide_element{

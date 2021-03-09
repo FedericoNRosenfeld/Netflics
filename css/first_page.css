@@ -2,22 +2,21 @@
 
 /* general content */
 body{
-    font-family: 'Lato', sans-serif;
-    background-image: linear-gradient(to right, black, black,   rgb(235, 140, 15));
-    -webkit-background-size: cover;
-    background-size: cover;
+    font-family: 'Lato', sans-serif;    
 
+    background: linear-gradient(to right, black, black,   rgb(235, 140, 15));
+    -webkit-background-size: cover;
+    background-size:cover;
+    overflow-x: hidden;
 }
 .big_logo_container{
     position: relative;
     margin-left: 50px;
     margin-top: 50px;
+ 
 
 }
 
-.message_suscription{
-    color: rgba(235, 139, 15, 0.767);
-}
 
 .presentation{
     position: relative;
@@ -41,7 +40,18 @@ body{
     background-image: linear-gradient(to right, black, black,   rgb(235, 140, 15), rgb(235, 140, 15, 0));
     color: rgb(235, 140, 15) ;
 }
+.message_suscription{
+    color: rgba(235, 139, 15, 0.767);
+}
 
+
+@media screen and (max-width: 650px) {
+    .list_series_box , .message_suscription{
+        color:white;
+    }  
+  }
+  
+  
 .generate_space_sm{
     margin-top: 3%;
 }
@@ -49,7 +59,7 @@ body{
 .show_box{
     z-index: 1;
     position: relative; 
-    width: auto;
+    width: 100%;
     height: auto;
     background-image: linear-gradient(to right, black, rgb(68, 62, 62),   rgb(235, 140, 15));
     padding: 4%;
@@ -64,12 +74,7 @@ body{
     max-height: auto;
 }
  
-.show_box:hover {
-    z-index: 2;
-    width: 150%;
-    height: 100%;
 
-}
 
 
 .btn_log{
