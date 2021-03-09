@@ -18,10 +18,9 @@ img {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
+  top: 40%;
+  width: 5%;
   padding: 16px;
-  margin-top: -22px;
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 18px;
@@ -38,7 +37,7 @@ img {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(82, 41, 3, 0.8);
 }
 
 
