@@ -110,3 +110,13 @@
     content:url("../images/presentations/video_trailer.png")
 
  }
+
+
+ .filter{
+     margin-top: 2%;
+     margin-left: 1%;
+ }
+
+ .active_filter{
+    color: orange;     
+ }

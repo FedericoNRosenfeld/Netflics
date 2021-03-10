@@ -1,4 +1,12 @@
 
+function preparePage(element){
+    document.getElementById("search_word").textContent = element;
+    makeRelatedList( element);
+
+};
+
+preparePage(new URLSearchParams(window.location.search).get('search'));
+
 
 function makeRelatedList(search_word) {
     // Establish the array which acts as a data source for the list
@@ -58,13 +66,8 @@ function makeRelatedList(search_word) {
     }
 }
 
-
-// Usage
-
-makeRelatedList(document.getElementById("search_word").textContent );
-
-
-function createVideoWindow(id){
+// On mouse over 
+function createTrailerBox(id){
 
     let element = $("#"+id+"");
     element.toggleClass("generatePreview");
@@ -75,31 +78,21 @@ function createVideoWindow(id){
     let control = $("#video_ctrl_"+id+"");
     control.toggleClass("hide_element"); 
 
-
 }
 
 
-$(document).ready(function(){
-    $(".box_expand").hover(function(){
-        console.log(this.id);
-        document.getElementById(this.id).addEventListener("mouseenter", createVideoWindow(this.id));
-        
-    })});
 
 
-    let listData = ['m','s'];
 
-
-    // Items generator
-   ;
-
+// Items generator
+  
+let savedGeneratedData= [];
 
 function makeListOfVideos(amount, id) {
  
 
     // Make the list
-    let prefix = id.charAt(0)
-    let listData = ['m','s'];
+    let videoType = ['m','s'];
 
     let loadData = document.createElement('div');
     loadData.className = "loadData";
@@ -108,14 +101,16 @@ function makeListOfVideos(amount, id) {
     document.getElementById(id).appendChild(loadData);
 
     for (let i = 0; i < amount; ++i){
+
+        let gender = videoType[Math.floor(Math.random() * 2)]
         let dgen = document.createElement('div');
         dgen.className = "icons-li video_container box_expand";
-        dgen.id = "num"+ i + prefix;
+        dgen.id = "num"+ i +gender;
 
         let img = document.createElement('img');
         img.className = "img-fluid icons-li video_img";
-        img.src="../images//presentations/"+listData[Math.floor(Math.random() * 2)] +""+( Math.floor(Math.random() * 7)) +".png";
-        img.id = "video_img_"+i + prefix;
+        img.src="../images//presentations/"+gender +""+( Math.floor(Math.random() * 7)) +".png";
+        img.id = "video_img_"+i + gender;
 
 
         let icon1 = document.createElement('ion-icon');
@@ -133,11 +128,11 @@ function makeListOfVideos(amount, id) {
         
         let dctrl = document.createElement('div');
         dctrl.className = "video_ctrl hide_element";
-        dctrl.id = "video_ctrl_num"+i + prefix;
+        dctrl.id = "video_ctrl_num"+i + gender;
 
         let ddesc = document.createElement('div');
         ddesc.className = "video_desc hide_element";
-        ddesc.id = "video_desc_num"+i + prefix;
+        ddesc.id = "video_desc_num"+i + gender;
 
         let vdesc = document.createElement('p');
         vdesc.innerHTML = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus maxime consectetur cum laborum aperiam explicabo? Iusto consequuntur numquam facere alias.  Voluptatem velit atque quas necessitatibus accusantium vero. Sequi, possimus?";
@@ -154,12 +149,12 @@ function makeListOfVideos(amount, id) {
 
         loadData.appendChild(dgen);
     }
+    savedGeneratedData.push(loadData);
     
 }
 
 function generateFreeContent( totalElements, id ){
-    makeListOfVideos(totalElements, id);
-    
+    makeListOfVideos(totalElements, id);  
 }
 
 
@@ -167,10 +162,71 @@ generateFreeContent(16, "searchList");
 generateFreeContent(12, "recomendedList"); 
 generateFreeContent(8, "fridayList"); 
 
-document.getElementById("search_icon_mobile").addEventListener('click', function(e) {
-    console.log(document.getElementById("search_mobile_screen").classList);
-        $("#search_mobile_screen" ).toggleClass("hide_element");  
-        console.log(document.getElementById("search_mobile_screen").classList);
-    });
+$(document).ready(function(){
+    $(".box_expand").hover(function(){
+        document.getElementById(this.id).addEventListener("mouseenter", createTrailerBox(this.id));
+        
+    })});
+
+
+
+function filterItems(filter, id){
+
+    let saveData = savedGeneratedData[0].cloneNode(true);
+    let container =  document.getElementById(id);
+
+    //clean the container on screan
+
+     //Filter data using saved one 
+    if (filter == "all"){
+        container.replaceChild(saveData, document.getElementById(id).children[0]);
+    }
+    else{
+        let filterData = document.createElement('div');
+        filterData.className = "loadData";
+        let items_found = 0;
+        for (let i = 0 ; i < savedGeneratedData[0].childElementCount; i++){
+
+            let id_check = savedGeneratedData[0].children[i].id;
+            if (id_check.charAt(id_check.length - 1) == filter ){
+                filterData.appendChild(saveData.children[i -items_found]);    
+                items_found++;  
+            } 
+        }
+        container.replaceChild(filterData, document.getElementById(id).children[0]);
+
+    }
+
+    $(document).ready(function(){
+        $(".box_expand").hover(function(){
+            document.getElementById(this.id).addEventListener("mouseenter", createTrailerBox(this.id));
+            
+        })});
     
-    
+      
+}
+
+$("#filter_all").click(function(){
+    filterItems("all","searchList");
+    $("#filter_all").addClass("active_filter");
+    $("#filter_ss").removeClass("active_filter");
+    $("#filter_sm").removeClass("active_filter");    
+
+});
+
+$("#filter_ss").click(function(){
+    filterItems("s","searchList");
+    $("#filter_all").removeClass("active_filter");
+    $("#filter_ss").addClass("active_filter");
+    $("#filter_sm").removeClass("active_filter");    
+
+});
+
+$("#filter_sm").click(function(){
+    filterItems("m","searchList");   
+    $("#filter_all").removeClass("active_filter");
+    $("#filter_ss").removeClass("active_filter");
+    $("#filter_sm").addClass("active_filter");    
+
+});
+
