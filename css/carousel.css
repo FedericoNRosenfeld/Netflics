@@ -1,0 +1,89 @@
+
+
+.mySlides {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: 5%;
+  padding: 16px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(82, 41, 3, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 5px;
+  width: 15px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation: fade 1.5s forwards;  
+  -webkit-animation: fade 1.5s forwards;
+
+}
+
+@-webkit-keyframes fade {
+  0% {opacity: .4} 
+  100% {opacity: 1}
+}
+
+@keyframes fade {
+  0% {opacity: .4} 
+  100% {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.slideshow-container{
+  margin-left: 2%;  
+  margin-right: 2%;
+}
+
+.carousel_newStuff{
+    background-image: linear-gradient(to right, black, black,   rgb(235, 140, 15), rgb(235, 140, 15, 0));
+    margin-top: -2%; 
+    padding-top: 2%;
+}

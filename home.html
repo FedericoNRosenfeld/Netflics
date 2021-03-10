@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/search.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet">
+
+  <!-- Browser Title -->
+  <title>Netflics</title>    
+  <link rel="icon" href="images/logo_s.png">
+
+</head>
+<body >
+<!-- Mobile Top bar--> 
+    <div class="navbar_desktop logo_top_center center align-elements">
+        <div class="container" style="flex: 1;">
+            <a class="navbar-brand link_style" href="#"><img src="images/logo.png" alt="Netflics" ></a>
+        </div>
+    </div>
+
+    <!-- Desktop Navbar-->
+    <nav class="navbar navbar_desktop navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xl">
+        <div class="container remove_empty_spaces " >
+            <!-- Icono modificado de: https://www.flaticon.es/-->
+            <a class="navbar-brand link_style" href="#"><img src="images/logo.png" alt="Netflics" ></a>
+    
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav mr-auto">
+                    <!-- mr-auto botones lado izquierdo, ml-auto botones lado derecho-->
+                    <li class="nav-item item-space active">
+                    <a id="nav_Home" class="nav-link link_style textAuto" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item item-space">
+                    <a id="nav_Series" class="nav-link link_style textAuto" href="#">Series</a>
+                    </li>
+                    <li class="nav-item item-space">
+                    <a id="nav_Peliculas" class="nav-link link_style textAuto" href="#">Peliculas</a>
+                    </li>
+                    <li class="nav-item item-space">
+                    <a id="nav_favoritos" class="nav-link link_style textAuto" href="#">Mis Favoritos</a>
+                    </li>         
+                </ul>
+            </div>
+
+
+            <div class="content_right ">
+                <ul>
+                
+                
+                    <!-- User -->
+                    <li class="icons-li m_rightSide">               
+                        <div class="desktop_user dropdown" style="float:right;">
+                            <a class="icons-li nav-link dropdown-toggle dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img id="usr_img" class="icon-base-size" src="images/user_profile_empty.png" alt="Usuario" >     
+                            </a>
+                            <div class="dropdown">
+                                <div id="myDropdown" class="dropdown-content">
+                                    <div class="user_ctrl_box">
+                                        <a class="icons-li  link_style " href="#">Perfil</a> 
+                                        <a class="icons-li  link_style " href="#">Configuracion</a> 
+                                        <div class="dropdown-divider "></div>
+                                        <a class="icons-li  link_style " href="#">Centro de ayuda</a> 
+                                        <div class="dropdown-divider "></div>
+                                        <a class="icons-li link_style " href="#">Cerrar sesion</a> 
+                                    </div>   
+                                </div>
+                            </div>                             
+                        </div>                                                     
+                    </li>
+                    
+                    <!-- Notifications -->  
+                    <li class="icons-li item-space m_rightSide">
+                        <div class="desktop_notifications">
+                            <a id="notif_off" class="notif_img_d link_style"  href="#"><img  id="notif_img_off_d"class=" notif_img icon-base-size" src="images/notification_no.png" alt="Notificaciones" ></a>
+                            <a id="notif_on" class="notif_img_d  link_style hide_element"  href="#"><img id="notif_img_on_d" class="notif_img icon-base-size" src="images/notification_yes.png" alt="Notificacion_activa" ></a>
+                        </div>
+                    </li>
+
+                    <!-- Search Bar-->
+
+                    <li class="icons-li item-space m_rightSide ">
+                        <div class="desktop_search" >
+                            <div action="" class="search-form" >
+                                <div class="form-group has-feedback ">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <div class=" form-control-feedback ">              		
+                                        <span class="glyphicon "><img id="search_icon" class="search_icon  glyphicon" src="images/search.png" alt="Notificacion_activa" > </span>                                                 
+                                    </div>                            
+                                    <input type="text" class="form-control" name="search" id="search_desk" placeholder="buscar">
+                                </div>
+                            </div>                  
+                        </div>                 
+                    </li>
+                    
+                </ul>
+            </div>
+        </div> <!-- container -->
+        
+    </nav>
+
+
+    <div class="promo_container"></div>
+
+    <div class="watching_container"></div>
+    <div class="friday_container"></div>
+    <div class="alreadyWatched_container"></div>
+
+    <div class="category_container">       
+        <div class="list_videos_container">
+            <div class=" videos_list  ">
+                <div class="videos_container" id="acategory"> </div>
+            </div>              
+        </div>          
+    </div>
+</br>
+    <div class="category_container">       
+        <div class="list_videos_container">
+            <div class=" videos_list  ">
+                <div class="videos_container" id="bcategory"> </div>
+            </div>              
+        </div>          
+    </div>
+
+    <div class="category_container"></div>
+    <div class="category_container"></div>
+    <div class="category_container"></div>
+
+
+
+<!-- Mobile Navbar-->
+    <div class="navbar_mobile">
+        <div class="collapse navbar-collapse menu_section" id="navbarSupportedContent" >
+            <div class="align-elements">
+                <div class="center " style="flex: 1;">
+                    <a id="nav_Home" class=" link_style text_submenu" href="#">Series </a>
+                </div>
+                <div class="center " style="flex: 1;">
+                    <a id="nav_Series" class=" link_style text_submenu" href="#">Peliculas</a>
+                </div>
+                <div class="center " style="flex: 1;">
+                    <a id="nav_Peliculas" class="link_style text_submenu" href="#">Mis Favoritos</a>
+                </div>  
+                <div class="center " style="flex: 1;">
+                    <a id="nav_favoritos" class=" link_style text_submenu" href="#">Notificaciones <span class="red-dot" id="notif_dot_m">+1</span> </a>
+                </div>      
+                <div class="center " style="flex: 1;">
+                    <a id="nav_favoritos" class=" link_style text_submenu" href="#">Perfil</a>
+                </div>         
+            </div>
+        </div>     
+
+            <div class="align-elements">
+                <div class="center" style="flex: 2;">
+                    <a href="#"><img id="home_icon_mobile" class="icon-base-size invert_color" src="images/mobile/home.png" alt="Inicio"></a>
+                    <p>Inicio</p>
+                </div>
+                
+
+                <div class="center" style="flex: 2;">
+                    <a href="#"><img id="search_icon_mobile" class="icon-base-size invert_color" src="images/search.png" alt="Search"></a>
+                    <p>Buscar</p>
+                </div>
+
+                <div class="center" style="flex: 2;">
+                    <a href="#"><img id="download_icon_mobile" class="icon-base-size invert_color" src="images/mobile/direct-download.png" alt="Descargas"></a>
+                    <p>Descargas</p>
+                </div>  
+                
+                <div class="center" style="flex: 2;">
+                    <button class="navbar-toggler huerotate" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <img id="menu_icon_mobile" class="icon-base-size invert_color" src="images/mobile/menu.png" alt="Menu" style="padding-top: 4px;">
+                        <img id="menu_icon_mobile2" class="icon-base-size invert_color hide_element" src="images/mobile/menu_notif.png" alt="Menu" style="padding-top: 4px;">
+
+                    </button>
+                    <p style="padding-bottom: 18px;">Menu</p>
+                </div> 
+                                    
+            </div>
+    </div>
+
+
+    <!-- bootstrap and jquery-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- custom script -->
+    <script src="js/scripts.js"></script>
+    <script src="js/home.js"></script>
+
+    <!--IonicIcons https://ionicons.com/usage -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+</body>
+</html>
+
+
+
+
+

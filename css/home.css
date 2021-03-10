@@ -1,0 +1,52 @@
+
+@media(min-width: 799px) {
+    .navbar_desktop {
+        display: block;
+    }
+
+    .logo_top_center{
+        display: none;
+    }
+
+    .navbar_mobile{
+        display: none;
+    }
+   
+}
+
+
+@media(max-width: 799px) {
+    .navbar_desktop {
+        display: none;
+    }
+
+    .logo_top_center{
+        display: block;
+    }
+
+    .navbar_mobile{
+        display: block;
+        
+    }
+}
+
+.video_container{
+
+}
+
+
+.list_videos_container {
+   
+}
+
+
+.slider {
+    
+
+  }
+
+  .slide {
+    
+  }
+
+ 

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+  <link href="../css/video_player.css" rel="stylesheet">
+
+  <!-- Browser Title -->
+  <title>Playing Video</title>    
+  <link rel="icon" href="../images/logo_s.png">
+
+</head>
+<body onload="loadingScreen()">
+
+  <div class=" logo_container " id="logo"> 
+    <a class=" link_style" href="#"><img src="../images/logo.png" alt="Netflics" ></a>
+  </div>
+
+  <div class="warning_age" id="warning_age">
+    <div class="box_age">
+        <img class="icon_age" src="../images/player/icon-18.png" alt="+18">
+        <p class="desc_age ">violence content</p>    
+     </div>
+  </div>
+  
+  <div class="show_title center" id="title_center">
+    <div class="container-fluid textAuto ">
+        <h1>Titulo de Serie</h1>
+        <p>temporada</p>
+        <p>titulo episodio</p>
+    </div>
+  </div>
+  <div class="center_div_screen">
+    <div class="loading_video" id="loading_image"></div>
+  </div>
+   
+
+  <div class="">
+    <div class="show_resumen_pause hide_element textAuto" id="show_resumen_pause">
+      <p>Estas viendo</p>
+      <h2>Nombre de video</h2>
+      <p> Temporada X: E x</p>
+      <h4>Titulo episodio</h4>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque in illum autem ducimus molestias rerum rem mollitia voluptatem consequatur odit! Saepe quidem quis praesentium repellendus vero aut doloribus perferendis error?</p>
+    </div>
+  </div>
+
+
+
+<div class="bottom_screen">
+
+  <div class="container-fluid video_progresion">
+    <div class="row">
+      <div class="col-1 col-lg-1 col-md-1 col-sm-1 textAuto s_padding">
+        <p class="progressbar_time" id="progressbar_time">00:00:00</p>  
+      </div>
+      <div class="col-11 col-lg-11 col-md-11 col-sm-11 s_padding">
+        <div class="progressbar_container ">
+          <div type="range" class="progressbar" id="progressbar"> </div>   
+        </div>
+      </div>
+    </div>
+  </div>   
+  
+
+<div class="container-fluid">
+  <div class=" video_controls ">  
+    <div class="row ">
+      <ul class="fixed_left">
+        <li class="icons-li">
+          <div class="col-md-1 ">   
+            <div class="show_box  ">
+             
+            </div> 
+          </div>
+        </li> 
+        <li class="icons-li">
+          <div class="col-md-1 ">   
+            <div class="show_box  ">
+             
+            </div> 
+          </div>
+        </li>
+        <li class="icons-li">
+          <div class="col-md-1 ">   
+            <div class="show_box  ">
+             
+            </div> 
+          </div>
+        </li>
+        <li class="icons-li">
+          <div class="col-md-1 ">   
+            <div class="show_box  ">
+              <input type="image" class=" imge play_button invert_color img-fluid hide_element" src="../images/player/play.png" alt="play" id="play">       
+              <input type="image" class=" imge play_button invert_color img-fluid " src="../images/player/pause.png" alt="pause" id="pause" >
+            </div> 
+          </div>
+        </li>
+
+        <li class="icons-li">
+          <div class="col-md-1">   
+            <div class="show_box ">
+              <input type="image" class="imge volumen invert_color img-fluid" src="../images/player/audio_h.png " alt="volumen" id="audio" >              
+            </div> 
+          </div>
+        </li>
+
+        <li class="icons-li"> 
+          <div class="col-sm-1">
+            <div class="show_box ">
+              <input type="image"  class="imge 10sec_button invert_color img-fluid" src="../images/player/rewind.png" alt="-10sec" id="10sub">    
+            </div>       
+          </div>
+        </li>
+
+        <li class="icons-li ">
+          <div class="col-sm-1">   
+            <div class="show_box ">
+              <input type="image"  class="imge 10sec_button invert_color img-fluid" src="../images/player/foward.png" alt="+10sec" id="10sum">      
+            </div>     
+          </div>
+        </li>
+
+        
+        <li class="icons-li ">
+          <div class="col-sm-1"> 
+            <div class="show_box">
+              <input type="image" class="imge show_subtitles invert_color img-fluid" src="../images/player/subtitles.png" alt="subtitles" id="subtitles" >          
+            </div> 
+        </div>
+        </li>
+
+        <li class="icons-li ">
+          <div class="col-sm-1">   
+            <div class="show_box">
+              <input type="image" class="imge episodes_list invert_color img-fluid" src="../images/player/episodes_list.png" alt="episodes" id="episodes" >    
+            </div> 
+          </div>
+        </li> 
+
+        <li class="icons-li ">
+          <div class="col-sm-1">   
+            <div class="show_box">
+              <input type="image" class="imge next_button invert_color img-fluid" src="../images/player/next.png" alt="next" id="next_crtl" >     
+            </div> 
+          </div>
+        </li>
+
+        <li class="icons-li ">
+          <div class="col-sm-1"> 
+            <div class="show_box">
+              <input type="image" class="imge show_help invert_color img-fluid" src="../images/player/help.png" alt="help" id="help_ctrl" >              
+            </div> 
+          </div>
+        </li>
+
+        <li class="icons-li ">
+          <div class="col-sm-1"> 
+            <div class="show_box">
+              <input type="image" class="imge full_screen invert_color img-fluid" src="../images/player/fullscreen.png" alt="fullscreen" id="fullscreen" >              
+            </div> 
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+    
+</div>
+
+
+ 
+</div>
+
+
+
+  <!-- bootstrap and jquery-->
+  <script src="../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+  <!--IonicIcons https://ionicons.com/usage -->
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+ <!-- custom script -->
+ <script src="../js/video_player.js"></script>
+
+</body>
+</html>
+
+
+
