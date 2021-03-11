@@ -61,6 +61,10 @@ p{
     --color:  rgb(243, 162, 86)  !important;
 }
 
+.link_style{
+    color: white;
+    transition-duration: .5s;
+}
 
 .link_style:hover{
     color: rgb(243, 162, 86);
@@ -88,10 +92,7 @@ p{
 }
 
 
-.link_style{
-    color: white;
-    transition-duration: .5s;
-}
+
 
 .dropdown-menu .nav-item:hover{
     background-color: rgba(0, 0, 0, .15);

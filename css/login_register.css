@@ -1,14 +1,20 @@
 @keyframes icons_rotate_animation {
-    0% {transform: rotateY(180deg);}
+    0% {transform: rotateY(0deg);}
     50% { transform: rotateY(180deg); }
     100% { transform: rotateY(360deg);}
   }
 
-  
+.bkg_registrer{
+    background-image: url(../images/bkg_register.jpg);
+background-repeat: no-repeat;}  
 
 .container{
     height: 100%;
     align-content: center;
+}
+
+.form_register_container, .suscription_general, .final_step_container{
+    margin-top: 2%;
 }
     
 .card_login{
@@ -21,7 +27,17 @@
     border: solid 2px orange;
 }
     
-    
+.card_register{
+    height: auto;
+    margin-bottom: auto;
+    padding-top: 5%;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border: solid 2px orange;
+
+} 
+
+
     
 .card-header h3{
     color: white;
@@ -36,14 +52,15 @@
 }
 
 .icon_effect{
-    animation: icons_rotate_animation 2s infinite;
+    animation: icons_rotate_animation 5s infinite;
 } 
     
-.remember_box{
+.remember_box, .conditions_box{
     color: white;   
 }
 
-.remember_box input{
+
+.remember_box input, .conditions_box input{
     width: 20px;
     height: 20px;
     margin-left: 15px;
@@ -57,10 +74,15 @@
 .login_btn{
     color: black;
     background-color: rgb(235, 140, 15);
-    width: 100px;
     height: auto;
 }
 
+.register_btn{
+    margin-top: 2%;
+    color: black;
+    background-color: rgb(235, 140, 15);
+    height: auto; 
+}
 
 .links{
     color: white;
@@ -70,6 +92,14 @@
     margin-left: 4px;
 }
 
+.note_text{
+    font-size: 80%;
+    color: white;
+}
+
+.note_text_box{
+    margin-top: 2%;
+}
 @-webkit-keyframes modal_animation-animation { 
     from { 
         top: -100px; 
@@ -128,3 +158,160 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
   }
+
+
+  .suscription_plan_container{
+    margin-top: 2%;
+    background-image: linear-gradient(to right,  black,   rgb(235, 140, 15), black);
+    color: white;
+    text-shadow: rgb(88, 88, 88) 1px 1px;
+  }
+
+ 
+.suscription_container{
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.title_sus_box{
+    width: auto;
+    font-size: 32px;
+}
+
+.price{
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    font-size: 150%;
+}
+
+.typeSuscription{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    font-size: 200%;
+}
+
+.information{
+    position: relative;
+    left: 2%;
+    right: 2%;
+    top: 20%;
+    width: 80%;
+    overflow: auto;
+
+}
+
+.information_box{
+    max-height: 70%;
+    margin: 1%;
+    padding-left: 1%;
+
+}
+
+.susc_bene{
+    position: absolute;
+    left: 1%;
+    top: 4%;
+    color: #f07808;
+}
+
+.susc_text{
+    margin-top: 3%;
+}
+
+
+#lvl1, .form-group_lvl1, .box_style_susc1 span{
+    background:rgba(40,0, 0, 0.9)  !important;
+    cursor: pointer;
+
+}
+
+#lvl2, .form-group_lvl2, .box_style_susc2 span{
+    background:rgba(40,60, 20, 0.9) !important;
+    cursor: pointer;
+
+}
+
+#lvl3, .form-group_lvl3, .box_style_susc3 span{
+    background:rgba(00,40, 40, 0.9) !important;
+    cursor: pointer;
+
+}
+#lvl4, .form-group_lvl4, .box_style_susc4 span{
+    background:rgba(40, 0, 40, 0.9) !important;
+    cursor: pointer;
+
+}
+
+#suscription_information_lvl1{
+    background-image: linear-gradient(to bottom, rgba(40, 0, 0, 0.9),rgba(80, 0, 0, 0.9) ) !important;
+}
+
+#suscription_information_lvl2 {
+    background-image: linear-gradient(to bottom, rgba(40,60, 20, 0.9),rgba(80,120, 40, 0.9)) !important;
+}
+
+ #suscription_information_lvl3 {
+    background-image: linear-gradient(to bottom, rgba(00,40, 40, 0.9),rgba(00,80, 80, 0.9)) !important;
+}
+#suscription_information_lvl4{
+    background-image: linear-gradient(to bottom, rgba(40, 0, 40, 0.9),rgba(80, 0, 80, 0.9)) !important;
+}
+
+.suscription_box{
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    color: white;
+    border:none !important;
+}
+
+.suscription_information{
+    float: left;
+    overflow:auto ;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    padding: 3%;
+    color: white;
+    border: solid 1px   black;
+    border-top: none;
+}
+
+
+.item_susc{
+    text-align:left !important;
+}
+
+.item_susc_li{
+    list-style-type:square ;
+}
+
+.box_style_susc1 span, .box_style_susc2 span, .box_style_susc3 span, .box_style_susc4 span{
+    margin: 0 !important;
+    font-size: 14px !important;
+    color: white;
+
+}
+
+.checkbox_div{
+    font-size: 20px;
+    padding-left: 25% !important;
+    padding-right: 25% !important;
+    left: 20px;
+}
+
+
+.step_link{
+    margin-left: 10px;
+    margin-right: 10px ;
+}
+
+.disable_link{
+    color: #665555;
+    text-decoration: none;
+
+}
