@@ -6,14 +6,14 @@
 
 .bkg_registrer{
     background-image: url(../images/bkg_register.jpg);
-}  
+background-repeat: no-repeat;}  
 
 .container{
     height: 100%;
     align-content: center;
 }
 
-.form_register_container{
+.form_register_container, .suscription_general, .final_step_container{
     margin-top: 2%;
 }
     
@@ -174,17 +174,6 @@
 
 }
 
-  .suscription_box{
-    position: relative;
-    float: left;
-    margin: 10px;
-    height: 220px;
-    background:rgba(20,20, 0, 0.9);
-  }
-
- 
-
-
 .title_sus_box{
     width: auto;
     font-size: 32px;
@@ -233,37 +222,96 @@
 }
 
 
-.lvl1{
-    background:rgba(20,20, 0, 0.9);
-}
-
- .lvl2{
-    background:rgba(20,30, 10, 0.9);
-}
-
- .lvl3{
-    background:rgba(00,20, 20, 0.9);
-}
- .lvl4{
-    background:rgba(20, 0, 20, 0.9);
-}
-
-
-.lvl1:hover{
-    background:rgba(126, 85, 4, 0.9);
+#lvl1, .form-group_lvl1, .box_style_susc1 span{
+    background:rgba(40,0, 0, 0.9)  !important;
     cursor: pointer;
+
 }
 
- .lvl2:hover{
-    background:rgba(40,60, 20, 0.9);
+#lvl2, .form-group_lvl2, .box_style_susc2 span{
+    background:rgba(40,60, 20, 0.9) !important;
     cursor: pointer;
+
 }
 
- .lvl3:hover{
-    background:rgba(00,40, 40, 0.9);
+#lvl3, .form-group_lvl3, .box_style_susc3 span{
+    background:rgba(00,40, 40, 0.9) !important;
     cursor: pointer;
+
 }
- .lvl4:hover{
-    background:rgba(40, 0, 40, 0.9);
+#lvl4, .form-group_lvl4, .box_style_susc4 span{
+    background:rgba(40, 0, 40, 0.9) !important;
     cursor: pointer;
+
+}
+
+#suscription_information_lvl1{
+    background-image: linear-gradient(to bottom, rgba(40, 0, 0, 0.9),rgba(80, 0, 0, 0.9) ) !important;
+}
+
+#suscription_information_lvl2 {
+    background-image: linear-gradient(to bottom, rgba(40,60, 20, 0.9),rgba(80,120, 40, 0.9)) !important;
+}
+
+ #suscription_information_lvl3 {
+    background-image: linear-gradient(to bottom, rgba(00,40, 40, 0.9),rgba(00,80, 80, 0.9)) !important;
+}
+#suscription_information_lvl4{
+    background-image: linear-gradient(to bottom, rgba(40, 0, 40, 0.9),rgba(80, 0, 80, 0.9)) !important;
+}
+
+.suscription_box{
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    color: white;
+    border:none !important;
+}
+
+.suscription_information{
+    float: left;
+    overflow:auto ;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    padding: 3%;
+    color: white;
+    border: solid 1px   black;
+    border-top: none;
+}
+
+
+.item_susc{
+    text-align:left !important;
+}
+
+.item_susc_li{
+    list-style-type:square ;
+}
+
+.box_style_susc1 span, .box_style_susc2 span, .box_style_susc3 span, .box_style_susc4 span{
+    margin: 0 !important;
+    font-size: 14px !important;
+    color: white;
+
+}
+
+.checkbox_div{
+    font-size: 20px;
+    padding-left: 25% !important;
+    padding-right: 25% !important;
+    left: 20px;
+}
+
+
+.step_link{
+    margin-left: 10px;
+    margin-right: 10px ;
+}
+
+.disable_link{
+    color: #665555;
+    text-decoration: none;
+
 }

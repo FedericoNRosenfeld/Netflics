@@ -4,8 +4,6 @@ $("#search_desk").on("keypress", function (e) {
 
 
 document.getElementById("search_desk").addEventListener( "keydown", function( e ) {
-    console.log("document:"+ e.code);
-
         var keyCode = e.code;
       
         if (keyCode == 'Enter'){
