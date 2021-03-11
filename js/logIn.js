@@ -14,3 +14,18 @@ function  logIn_Animations(){
     }, 4000);
 
 }
+
+
+$("#SingIn_btn").click(function(){
+    $(".form_register_container").toggleClass("hide_element");
+    $(".suscription_general").toggleClass("hide_element");
+});
+
+$(".suscription_box").click(function(){
+    $("#suscription_selected").text(this.id);
+    $("#get_suscription").toggleClass("hide_element");
+    console.log(this.id);
+
+});
+
+
