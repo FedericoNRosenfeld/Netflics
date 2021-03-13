@@ -117,7 +117,65 @@
 
     <!-- Everything about general configurations -->
     <div class="config_general">
-        
+        <div class="SecondTitle_container ">
+            <p class="title_subsection">Mis  Perfiles</p>
+        </div>  
+        <div class="data_container row ">
+                
+            <div class="content_section_info ">
+                <p class="line_info"> <span class="title_line"></span> </p>
+            </div>
+
+            <div class="content_section_info " >
+                
+                <div class="line_info row center">
+                    <div class="profile_box"  id="usr_box_1">
+                        <a class="" >
+                            <img id="usr_img_1" class=" user_img_confg" src="../images/user_profile_empty.png" alt="Usuario" >     
+                        </a>                    
+                        <p class="text_submenu"> Usuario uno</p> 
+
+                    </div>
+                    <div class="profile_box"  id="usr_box_2">
+                        <a class="" >
+                            <img id="usr_img_2" class="" src="../images/user_profile_empty.png" alt="Usuario" >     
+                        </a>                    
+                        <p class="text_submenu"> Usuario dos</p> 
+
+                    </div>
+
+                    <div class="profile_box" id="usr_box_3">
+                        <a class="" >
+                            <img id="usr_img_3" class="" src="../images/add_user.png" alt="Usuario" >     
+                        </a>                    
+                        <p class="text_submenu"> Nuevo Perfil</p> 
+                    </div>              
+                </div>
+            </div>
+        </div>
+            <div class="data_container row profile_data_options hide_element" >
+                
+                <div class="content_section_info ">
+                    <p class="line_info text_submenu"> idioma <span class="line_info_subtext"> ( Ingles ) </span> </p>
+                    
+                    <a class="edit_info text_submenu" href="#"> Cambiar</a>
+                </div> 
+                <div class="content_section_info  ">
+                    <p class="line_info text_submenu"> Restriccion de contenido <span class="line_info_subtext"> (  Sin restricciones ) </span></p>
+
+                    <a class="edit_info text_submenu" href="#"> Cambiar</a>
+                </div> 
+                <div class="content_section_info ">
+                    <p class="line_info text_submenu"> Bloqueo de perfil </p>
+
+                    <a class="edit_info text_submenu" href="#"> Cambiar</a>
+                </div> 
+                <div class="content_section_info ">
+                    <p class="line_info text_submenu"> Historial </p>
+
+                    <a class="edit_info text_submenu" href="#"> Ver</a>
+                </div>           
+            </div>    
         <div class="SecondTitle_container ">
             <p class="title_subsection">Mis  dispositivos</p>
         </div>  
@@ -154,66 +212,8 @@
         
         </div>
 
-        <div class="SecondTitle_container ">
-            <p class="title_subsection">Mis  Perfiles</p>
-        </div>  
-        <div class="data_container row ">
-                
-            <div class="content_section_info ">
-                <p class="line_info"> <span class="title_line"></span> </p>
-            </div>
-
-            <div class="content_section_info " >
-                
-                <div class="line_info row center">
-                    <div class="profile_box">
-                        <a class="" >
-                            <img id="usr_img_1" class="" src="../images/user_profile_empty.png" alt="Usuario" >     
-                        </a>                    
-                        <p class="text_submenu"> Usuario uno</p> 
-
-                    </div>
-                    <div class="profile_box">
-                        <a class="" >
-                            <img id="usr_img_2" class="" src="../images/user_profile_empty.png" alt="Usuario" >     
-                        </a>                    
-                        <p class="text_submenu"> Usuario dos</p> 
-
-                    </div>
-
-                    <div class="profile_box">
-                        <a class="" >
-                            <img id="usr_img_2" class="" src="../images/add_user.png" alt="Usuario" >     
-                        </a>                    
-                        <p class="text_submenu"> Nuevo Perfil</p> 
-                    </div>              
-                </div>
-            </div>
-        </div>
-            <div class="data_container row profile_data_options" >
-                
-                <div class="content_section_info ">
-                    <p class="line_info text_submenu"> idioma <span class="line_info_subtext"> ( Ingles ) </span> </p>
-                    
-                    <a class="edit_info text_submenu" href="#"> Cambiar</a>
-                </div> 
-                <div class="content_section_info  ">
-                    <p class="line_info text_submenu"> Restriccion de contenido <span class="line_info_subtext"> (  Sin restricciones ) </span></p>
-
-                    <a class="edit_info text_submenu" href="#"> Cambiar</a>
-                </div> 
-                <div class="content_section_info ">
-                    <p class="line_info text_submenu"> Bloqueo de perfil </p>
-
-                    <a class="edit_info text_submenu" href="#"> Cambiar</a>
-                </div> 
-                <div class="content_section_info ">
-                    <p class="line_info text_submenu"> Historial </p>
-
-                    <a class="edit_info text_submenu" href="#"> Ver</a>
-                </div>           
-            </div>       
-        </div>
+           
+    </div>
 
         
 </div>
@@ -269,12 +269,18 @@
      
     <script>
 
-        
-        $(".profile_box").click(function(){
-          //  $(".profile_data_options").toggleClass("hide_element");
+    $(".profile_box").click( function() {
+        $(".profile_box").not(this).removeClass("boxActive");
+        $(".profile_data_options").toggleClass("hide_element");
+        $("#"+this.id).toggleClass("boxActive");
+        setTimeout(function(){
             $(".profile_data_options").toggleClass("slowApears");
-        });
+        },500);
+    });
 
+    $('input[type="checkbox"]').on('change', function() {
+        $('input[type="checkbox"]').not(this).prop('checked', false);
+    });
     </script>
 
      <!--IonicIcons https://ionicons.com/usage -->
