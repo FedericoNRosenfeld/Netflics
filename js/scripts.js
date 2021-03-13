@@ -17,11 +17,9 @@ function notifications_handler(notifications){
 }
 
 
-document.getElementById("search_icon_mobile").addEventListener('click', function(e) {
+$("#search_icon_mobile").click(function(e){
     $("#search_mobile_screen" ).toggleClass("hide_element");  
 });
-
-
 
 
 
@@ -112,7 +110,6 @@ function generateFreeContent( totalElements, id ){
         document.getElementById(id).appendChild(makeListOfVideos(i, id));
     }
 }
-
 
 
 generateFreeContent(15, "acategory");
