@@ -1,0 +1,84 @@
+
+.Account_Configuration_container{
+    background:rgb(230, 230, 230 ) !important;
+    width: 100%;
+    color: black;
+    padding-left:3%;
+    padding-right:3%;
+
+    overflow: hidden;
+}
+
+
+.config_usedData, .config_preferencesVideo, .config_general{
+    margin: 5%;
+    margin-left: 10% ;
+}
+
+.SecondTitle_container{
+    padding-left: 1% ;
+    padding-top: 1% ;
+    border-bottom: solid 2px rgb(250, 163, 1);
+}
+.SecondTitle_container .title_subsection{
+    font-size: 28px;
+}
+
+.data_container{
+    padding-left: 3% ;
+    padding-top: 2% ;
+}
+
+.content_section_info{
+    width: 100%;
+    margin-top: 1%;
+    padding-bottom: 1%;
+    border-bottom:  solid 0.2px rgb(200, 200, 200)
+
+}
+
+
+.content_section_info .line_info{
+    width: 75%;    
+    float: left;
+}
+
+ .edit_info{
+    width: 20%;
+    margin-right: 5%; 
+    float: right;
+ 
+}
+
+.title_line{
+    font-size: 120%;
+    color: rgb(117, 117, 117);
+}
+
+.profile_box{
+    margin-left: 5%;
+    margin-right: 5%;
+    cursor: pointer;
+
+}
+.profile_box:hover{
+    background: rgba( 0, 0, 0, .2);
+}
+
+.line_info_subtext{
+    color: rgb(117, 117, 117);
+    font-size: 70%;
+}
+
+.profile_data_options{
+    background: rgba( 0, 0, 0, .1);
+    opacity: 0;
+    transition: opacity 1s ease-out;
+
+}
+.slowApears{
+    opacity: 1;
+}
+.split_elements{ 
+    border: solid .5px orange;
+}

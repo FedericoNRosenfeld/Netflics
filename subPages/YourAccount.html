@@ -1,0 +1,284 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+
+  <link href="../css/userAccount.css" rel="stylesheet">
+
+
+  <!-- Browser Title -->
+  <title>Netflics</title>    
+  <link rel="icon" href="../images/logo_s.png">
+
+</head>
+<body>
+
+    
+
+<div class="Account_Configuration_container" >
+
+   
+    <!-- Everything related with information--> 
+    <div class="config_usedData ">
+        <div class="SecondTitle_container ">
+            <p class="title_subsection">Informacion</p>
+        </div>  
+        <div class="data_container row ">
+                   
+            <div class="content_section_info ">
+                <p class="line_info text_submenu"><span class="title_line">Email </span>  <strong><span id="email_account"> usuario@correo.com </span></strong></p>
+                <a class="edit_info text_submenu" href="#edit_field_email" data-toggle="modal"> Cambiar correo electronico</a>
+            </div> 
+
+            <div class="content_section_info ">
+                    <a class="edit_info text_submenu " href="#"> Cambiar contrase&ntilde;a</a>
+
+            </div>          
+
+            <div class="content_section_info ">
+                <p class="line_info text_submenu text_submenu"> <span class="title_line">Telefono </span> <strong> <span id="phone_account"> 2494111111 </span></strong></p>
+                <a class="edit_info text_submenu" href="#"> Cambiar numero de Telefono</a>
+            </div>          
+          
+        </div>
+
+        <div class="SecondTitle_container ">
+            <p class="title_subsection ">Suscripcion y pago</p>
+        </div>  
+        <div class="data_container row ">
+                   
+            <div class="content_section_info ">
+                <p class="line_info text_submenu"> <span class="title_line"> Suscripcion</span>   <strong>Nivel <span id="suscription_number">2</span> a <span id="suscription_precio">$230 mensual</span> </strong></p>
+                <a class="edit_info text_submenu" href="#"> Cambiar Suscripcion</a>
+            </div>
+            <div class="content_section_info ">
+                <p class="line_info text_submenu"> El próximo cobro mensual de Prime Video será el <span id="next_paymentDay">12 de abril de 2021</span>.</p>
+            </div>  
+           
+            <div class="content_section_info ">
+                <p class="line_info text_submenu"> <span class="title_line">Metodo de Pago </span>  <span id="phone_account">Tarjeta Visa XXXX-XXXX-XXXX-1111 </span></p>
+                <a class="edit_info text_submenu" href="#"> Seleccionar otro modo de pago</a>
+            </div> 
+            
+            <div class="content_section_info ">
+                
+                <a class="edit_info text_submenu" href="#"> A&ntilde;adir / Editar Metodos de Pago</a>
+            </div>    
+          
+        </div>
+
+    </div>
+
+    <!-- Everything related with video -->
+    <div class="config_preferencesVideo ">
+       <div class="SecondTitle_container ">
+            <p class="title_subsection">Preferencias de video</p>
+        </div>  
+        <div class="data_container row ">
+               
+            <div class="content_section_info ">
+                <p class="line_info text_submenu"> <span class="title_line">Tipo de Subtitulos</span> </p>
+
+            </div>
+
+            <div class="content_section_info ">
+                <p class="line_info text_submenu"> Personaliza cómo aparecen los subtítulos en todos los dispositivos registrados. </p>
+
+                <a class="edit_info text_submenu" href="#"> Presonalizar Subtitulos</a>
+            </div> 
+
+
+
+            <div class="content_section_info ">
+                <p class="line_info text_submenu"> <span class="title_line">Reproduccion Automatica</span> </p>
+
+            </div>          
+
+            <div class="content_section_info ">
+                <p class="line_info text_submenu"> Reproducir automaticamente al ingresar a ver un video </p>
+
+                <div class="edit_info" href="#" style="float: left; min-width: 100px;">
+                     <input type="checkbox" value="Reproducir" id="btn_autoPlayVideo" checked> <span>Si </span> 
+                     <div class="split_elements inLine" style="margin-left: 2px; margin-right: 10px;"></div>
+                     <input type="checkbox" value="No Reproducir" id="btn_autoPlayVideo"> <span> No  </span>
+
+                </div>
+            </div>          
+        </div>
+    </div>
+
+    <!-- Everything about general configurations -->
+    <div class="config_general">
+        
+        <div class="SecondTitle_container ">
+            <p class="title_subsection">Mis  dispositivos</p>
+        </div>  
+        <div class="data_container row ">
+                
+        
+            <div class="content_section_info "  id="dom_1">
+                
+                <p class="line_info">
+                    <ion-icon name="phone-portrait-outline"></ion-icon> 
+                        M11 - usuarioA
+                    </p>
+
+                <a class="edit_info text_submenu" href="#"> Eliminar Dispositivo</a>
+            </div>
+            <div class="content_section_info "  id="dom_2">
+                
+                <p class="line_info" >
+                    <ion-icon name="phone-portrait-outline"></ion-icon> 
+                        F4 - usuarioB
+                    </p>
+
+                <a class="edit_info text_submenu" href="#"> Eliminar Dispositivo</a>
+            </div> 
+            <div class="content_section_info "  id="dom_3">
+                
+                <p class="line_info">
+                    <ion-icon name="desktop-outline"></ion-icon>
+                        Desktop - casa
+                    </p>
+
+                <a class="edit_info text_submenu" href="#"> Eliminar Dispositivo</a>
+            </div>  
+        
+        </div>
+
+        <div class="SecondTitle_container ">
+            <p class="title_subsection">Mis  Perfiles</p>
+        </div>  
+        <div class="data_container row ">
+                
+            <div class="content_section_info ">
+                <p class="line_info"> <span class="title_line"></span> </p>
+            </div>
+
+            <div class="content_section_info " >
+                
+                <div class="line_info row center">
+                    <div class="profile_box">
+                        <a class="" >
+                            <img id="usr_img_1" class="" src="../images/user_profile_empty.png" alt="Usuario" >     
+                        </a>                    
+                        <p class="text_submenu"> Usuario uno</p> 
+
+                    </div>
+                    <div class="profile_box">
+                        <a class="" >
+                            <img id="usr_img_2" class="" src="../images/user_profile_empty.png" alt="Usuario" >     
+                        </a>                    
+                        <p class="text_submenu"> Usuario dos</p> 
+
+                    </div>
+
+                    <div class="profile_box">
+                        <a class="" >
+                            <img id="usr_img_2" class="" src="../images/add_user.png" alt="Usuario" >     
+                        </a>                    
+                        <p class="text_submenu"> Nuevo Perfil</p> 
+                    </div>              
+                </div>
+            </div>
+        </div>
+            <div class="data_container row profile_data_options" >
+                
+                <div class="content_section_info ">
+                    <p class="line_info text_submenu"> idioma <span class="line_info_subtext"> ( Ingles ) </span> </p>
+                    
+                    <a class="edit_info text_submenu" href="#"> Cambiar</a>
+                </div> 
+                <div class="content_section_info  ">
+                    <p class="line_info text_submenu"> Restriccion de contenido <span class="line_info_subtext"> (  Sin restricciones ) </span></p>
+
+                    <a class="edit_info text_submenu" href="#"> Cambiar</a>
+                </div> 
+                <div class="content_section_info ">
+                    <p class="line_info text_submenu"> Bloqueo de perfil </p>
+
+                    <a class="edit_info text_submenu" href="#"> Cambiar</a>
+                </div> 
+                <div class="content_section_info ">
+                    <p class="line_info text_submenu"> Historial </p>
+
+                    <a class="edit_info text_submenu" href="#"> Ver</a>
+                </div>           
+            </div>       
+        </div>
+
+        
+</div>
+
+<!-- Edit Box-->
+<div class="container login_form_container modal" id="edit_field_email" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="d-flex justify-content-center modal-dialog">
+        <div class="card_login modal-content ">
+            <div class="card-header center " style=" border-bottom: solid 2px rgb(250, 163, 1);">
+                <h3> Editar </h3>
+            </div>
+            <div class="card-body center container" style="padding-left:10%;padding-right: 10%;">
+                <form>
+                    <div class="input-group form-group" >
+                        <div class="input-group-prepend"style="margin-bottom: 10px;">
+                            <p> <span class="title_line">Tu Email actual es : </span> </p>                 
+                        </div>
+                        <p style="margin-left: 4px;"> <span class="title_line" > usuario@correo.com </span> </p>         
+                    </div>
+                    <div class="input-group form-group"  >
+                        <div class="input-group-prepend" style="margin-bottom: 10px;">
+                            
+                            <p> <span class="title_line">Nuevo Email: </span></p>
+                        </div>
+                        <input style="margin-left: 4px;  min-width: 200px;" type="password" class="form-control" placeholder="nuevo_usuario@correo.com">
+                    </div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend" style="margin-bottom: 10px;">      
+                            <p> <span class="title_line" ">Ingrese Contrase&ntilde;a:</span></p>
+                        </div>
+                        <input style="margin-left: 4px; min-width: 100px;" type="password"  class="form-control" placeholder="Contrase&ntilde;a ">
+                    </div>
+                   
+                    <div class="form-group"style="margin-bottom: 10px;">
+                        <button  id="editCheck" value="editOk" class="btn login_btn" style="border: solid 1px rgb(250, 163, 1);"> Confirmar</button>
+                    </div>
+                </form>
+              
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+     <!-- bootstrap and jquery-->
+     <script src="../js/jquery-3.6.0.min.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
+         
+     <!-- custom script -->
+     
+    <script>
+
+        
+        $(".profile_box").click(function(){
+          //  $(".profile_data_options").toggleClass("hide_element");
+            $(".profile_data_options").toggleClass("slowApears");
+        });
+
+    </script>
+
+     <!--IonicIcons https://ionicons.com/usage -->
+     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+ 
+ </body>
+ </html>
