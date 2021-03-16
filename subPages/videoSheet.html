@@ -4,8 +4,8 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+  <meta name='viewport' content='minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no'/>
+
   <!-- Bootstrap -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/styles.css" rel="stylesheet">
@@ -20,147 +20,383 @@
   
    
     <div class="videoSheet_container">
-        <div class="top_sheet">
-            <div class="data_container">
-                <div class="title_box">
-                    <h1 class="video_Title"> Nombre de Pelicula</h1>
-                </div>
-                <div class="resume_box textAuto">
-                    <p class="resume_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nihil quis, ipsum quisquam impedit sit perspiciatis minima inventore nobis, perferendis odio quae quos, esse exercitationem possimus? Quae nihil porro architecto.</p>
-                </div>   
+        <div class="top_sheet">     
+                <div class="data_container">
+                        <div class="title_box">
+                            <h1 class="video_Title"> Nombre de Pelicula</h1>
+                        </div>
+                        <div class="img_video_sm_box ">
+                            <img class="img_video_sm" src="../images/presentations/movie_big.jpg" alt="Pelicula">
+                        </div>
+                        <div class="resume_box textAuto">
+                            <p class="resume_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nihil quis, ipsum quisquam impedit sit perspiciatis minima inventore nobis, perferendis odio quae quos, esse exercitationem possimus? Quae nihil porro architecto.</p>
+                        </div>   
+        
+                        <div class="controls_video_box row">
+                            <button  class="btn_play btn btn_video" value="Reproducir" id="play_btn"> 
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class=" icon_btn_top"><ion-icon name="play"></ion-icon></span>
+                                    </div>
+                                    <span style="margin-top:3px">Reproducir </span>
+                                </div>
+                            </button>
+        
+                            <button  class="btn_play btn btn_video" value="Reproducir" id="trailer_btn"> 
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class=" icon_btn_top"><ion-icon name="play"></ion-icon></span>
+                                    </div>
+                                    <span style="margin-top:3px"> Ver Trailer </span>
+                                </div>
+                            </button>
+                            
+                            
+                            <button  class="add_myList btn btn_video" value="Agregar a mi lista"  id="addList_btn">      
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class="icon_btn_top"><ion-icon name="add-circle"></ion-icon></span>
+                                    </div>
+                                    <span style="margin-top:3px">Agregar a mi lista </span>
+                                </div>                     
+                            </button>
+                            
+                            <button  class="add_favorites btn btn_video" value="Agregar a Favoritos" id="addFavorites_btn">
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class=" icon_btn_top"><ion-icon name="heart"></ion-icon> </span>
+                                    </div>
+                                    <span style="margin-top:3px" class="favourite_btn_text">Agregar a mis favoritos </span>
+                                </div>
+                            </button>
 
-                <div class="controls_video_box row">
-                    <button  class="btn_play btn btn_video" value="Reproducir" id="play_btn"> 
+                            <button  class="add_favorites btn btn_video hide_element" value="Remover de Favoritos" id="removeFavorites_btn">
+                                <div class="input-group ">
+                                    <div class="input-group-prepend">
+                                        <span class=" icon_btn_top"><ion-icon name="heart" style="color: rgb(227,27,35)  !important;;"></ion-icon> </span>
+                                    </div>
+                                    <span style="margin-top:3px" class="favourite_btn_text">Remover de Favoritos </span>
+                                </div>
+                            </button>
+        
+                        </div>
+                       
+                       
+        
+                        <div class="info_video_box row">
+                               <div class="info_video_title textAuto">
+                                    <p class="info_video_text">  Duracion </p> 
+                               </div> 
+                               <div class="info_video_data textAuto">
+                                    <p class="info_video_spn">  1h 42min  </p>
+                                </div> 
+                        </div>
+                        <div class="info_video_box row">
+                            <div class="info_video_title textAuto">
+                                 <p class="info_video_text">  Clasificicacion por edad </p> 
+                            </div> 
+                            <div class="info_video_data textAuto">
+                                 <p class="info_video_spn">  Apto para todo publico </p>
+                             </div> 
+                        </div>     
+                        <div class="info_video_box row">
+                            <div class="info_video_title textAuto">
+                                 <p class="info_video_text">  Generos </p> 
+                            </div> 
+                            <div class="info_video_data textAuto">
+                                 <p class="info_video_spn">  Comedia, Familiar </p>
+                             </div> 
+                        </div>     
+                        <div class="info_video_box row">
+                            <div class="info_video_title textAuto">
+                                 <p class="info_video_text">  Calificacion </p> 
+                            </div> 
+                            <div class="info_video_data textAuto">
+                                <div class="general_score_box">
+                                    <p class="info_video_text"> 
+                                        <span  class="info_video_spn calification_stars_box" id="calification_stars_box_info">
+                                            <span> 4.5</span>
+                                            <ion-icon name="star"  class="calification_star_info"></ion-icon>
+                                            <ion-icon name="star"  class="calification_star_info"></ion-icon>
+                                            <ion-icon name="star"  class="calification_star_info"></ion-icon>
+                                            <ion-icon name="star-half"  class="calification_star_info"></ion-icon>
+                                            <ion-icon name="star-outline" class="calification_star_info"></ion-icon>
+                                        </span>
+                                    </p>
+                                </div>
+                                   
+                             </div> 
+                        </div>     
+        
+                        <div class="info_video_box row">
+                            <div class="info_video_title textAuto">
+                                 <p class="info_video_text">  Direccion </p> 
+                            </div> 
+                            <div class="info_video_data textAuto">
+                                 <p class="info_video_spn">   Lorem ipsum </p>
+                             </div> 
+                        </div>
+                        <div class="info_video_box row">
+                            <div class="info_video_title textAuto">
+                                <p class="info_video_text">  Reparto </p> 
+                            </div> 
+                            <div class="info_video_data textAuto">
+                                <p class="info_video_spn">   Lorem ipsum,  Lorem ipsum,  Lorem ipsum,  Lorem ipsum </p>
+                            </div> 
+                        </div>     
+                        <div class="info_video_box row">
+                            <div class="info_video_title textAuto">
+                                <p class="info_video_text">  Idiomas de audio  </p> 
+                            </div> 
+                            <div class="info_video_data textAuto">
+                                <p class="info_video_spn">  English, Espa&ntilde;ol(Espa&ntilde;a), <a class="seeMore" id="more_language"> ver mas...</a> <span id="more_language_data" class=" seeLess hide_element">  Lorem, ipsum, dolor, sit, amet, consectetur, adipisicing, elit. </span>  </p>
+                              
+                            </div> 
+                        </div>     
+                        <div class="info_video_box row">
+                            <div class="info_video_title textAuto">
+                                <p class="info_video_text">  Subtitulos  </p> 
+                            </div> 
+                            <div class="info_video_data textAuto">
+                                <p class="info_video_spn">  English, Espa&ntilde;ol(Espa&ntilde;a), <a class="seeMore" id="more_subtitles"> ver mas...</a>  <span id="more_subtitles_data" class="seeLess hide_element">  Lorem, ipsum, dolor, sit, amet, consectetur, adipisicing, elit. Lorem, ipsum, dolor, sit, amet, consectetur, adipisicing, elit. </span>  </p>
+                            </div> 
+                        </div>     
+                
+                  
+                     
+                </div>
+                <div class="trailer_container">
+
+                </div>
+                <div class="controls_video_box_bottom hide_element">
+                    <button  class="btn_play btn btn_stop_trailer" value="Reproducir" id="stop_btn"> 
                         <div class="input-group ">
                             <div class="input-group-prepend">
-                                <span class=" icon_btn_top"><ion-icon name="play"></ion-icon></span>
+                                <span class=" icon_btn_top"><ion-icon name="stop"></ion-icon></span>
                             </div>
-                            <span style="margin-top:3px">Reproducir </span>
+                            <span style="margin-top:3px">Detener</span>
                         </div>
                     </button>
-
-                    <button  class="btn_play btn btn_video" value="Reproducir" id="trailer_btn"> 
-                        <div class="input-group ">
-                            <div class="input-group-prepend">
-                                <span class=" icon_btn_top"><ion-icon name="play"></ion-icon></span>
-                            </div>
-                            <span style="margin-top:3px"> Ver Trailer </span>
-                        </div>
+                    <button  class="volume_btn rounded-circle" id="audio_btn"> 
+                        <span class=" "><ion-icon name="volume-mute"></ion-icon> </span>
                     </button>
-                    
-                    
-                    <button  class="add_myList btn btn_video" value="Agregar a mi lista"  id="addList_btn">      
-                        <div class="input-group ">
-                            <div class="input-group-prepend">
-                                <span class="icon_btn_top"><ion-icon name="add-circle"></ion-icon></span>
-                            </div>
-                            <span style="margin-top:3px">Agregar a mi lista </span>
-                        </div>                     
-                    </button>
-                    
-                    <button  class="add_favorites btn btn_video" value="Agregar a Favoritos" id="addFavorites_btn">
-                        <div class="input-group ">
-                            <div class="input-group-prepend">
-                                <span class=" icon_btn_top"><ion-icon name="heart"></ion-icon> </span>
-                            </div>
-                            <span style="margin-top:3px">Agregar a mis favoritos </span>
-                        </div>
-                    </button>
-
                 </div>
-               
-               
+          
+         
 
-                <div class="info_video_box row">
-                       <div class="info_video_title textAuto">
-                            <p class="info_video_text">  Duracion </p> 
-                       </div> 
-                       <div class="info_video_data textAuto">
-                            <p class="info_video_spn">  1h 42min  </p>
-                        </div> 
-                </div>
-                <div class="info_video_box row">
-                    <div class="info_video_title textAuto">
-                         <p class="info_video_text">  Clasificicacion </p> 
-                    </div> 
-                    <div class="info_video_data textAuto">
-                         <p class="info_video_spn">  Apto para todo publico </p>
-                     </div> 
-                </div>     
-                <div class="info_video_box row">
-                    <div class="info_video_title textAuto">
-                         <p class="info_video_text">  Generos </p> 
-                    </div> 
-                    <div class="info_video_data textAuto">
-                         <p class="info_video_spn">  Comedia, Familiar </p>
-                     </div> 
-                </div>     
-                <div class="info_video_box row">
-                    <div class="info_video_title textAuto">
-                         <p class="info_video_text">  Calificacion </p> 
-                    </div> 
-                    <div class="info_video_data textAuto">
-                        <div class="general_score_box">
-                            <p class="info_video_text"> 
-                                <span class="info_video_spn calification_stars_box">
-                                    <ion-icon name="star"  class="calification_star"></ion-icon>
-                                    <ion-icon name="star"  class="calification_star"></ion-icon>
-                                    <ion-icon name="star"  class="calification_star"></ion-icon>
-                                    <ion-icon name="star-half"  class="calification_star"></ion-icon>
-                                    <ion-icon name="star-outline" class="calification_star"></ion-icon>
-                                </span>
-                            </p>
-                        </div>
-                           
-                     </div> 
-                </div>     
-
-                <div class="info_video_box row">
-                    <div class="info_video_title textAuto">
-                         <p class="info_video_text">  Direccion </p> 
-                    </div> 
-                    <div class="info_video_data textAuto">
-                         <p class="info_video_spn">   Lorem ipsum </p>
-                     </div> 
-                </div>
-                <div class="info_video_box row">
-                    <div class="info_video_title textAuto">
-                        <p class="info_video_text">  Reparto </p> 
-                    </div> 
-                    <div class="info_video_data textAuto">
-                        <p class="info_video_spn">   Lorem ipsum,  Lorem ipsum,  Lorem ipsum,  Lorem ipsum </p>
-                    </div> 
-                </div>     
-                <div class="info_video_box row">
-                    <div class="info_video_title textAuto">
-                        <p class="info_video_text">  Idiomas de audio  </p> 
-                    </div> 
-                    <div class="info_video_data textAuto">
-                        <p class="info_video_spn">  English, Espa&ntilde;ol(Espa&ntilde;a), <span class="seeMore"> ver mas...</span>  </p>
-                    </div> 
-                </div>     
-                <div class="info_video_box row">
-                    <div class="info_video_title textAuto">
-                        <p class="info_video_text">  Subtitulos  </p> 
-                    </div> 
-                    <div class="info_video_data textAuto">
-                        <p class="info_video_spn">  English, Espa&ntilde;ol(Espa&ntilde;a), <span class="seeMore"> ver mas...</span>  </p>
-                    </div> 
-                </div>     
-             
-            </div>
-       
-
-            <div class="controls_video_box"></div>
             <div class="controls_coments_box"></div>
 
         </div>
 
+        <div class="general_comment_container">
+            <div class="card">
+                <div class="card-body comment_section_Title_box">
+                    <h4 class="card-title">Comentarios del publico</h4>
+                    
+                </div>
+                <div class="comment_filter">
+            
+                </div>
+                <div class="borderComment">
+                    <div class="comment_container">
+                        <div class="d-flex flex-row comment-row m-t-0 comment_box">
+                         
+                            <div class="p-2 comment_img_box" >
+                                <img src="../images/user_profile_empty.png" alt="user" width="50" class="rounded-circle">
+                            </div>
+                            <div class="comment_text">
+                              
+                                <div class="comment_text_box">
+                                    <form>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-auto" style="min-width: 200px; width: 60%; margin-bottom: 1%;">
+                                                    <label for="exampleFormControlSelect1">Mi comentario</label>
 
+                                                    <textarea   class="form-control input_comment" id="input_comment" placeholder="Dejar un comentario sobre la pelicula" ></textarea>
+                                                </div>
+                                                <div  class="col-auto float-left center">
+                                                    <label for="exampleFormControlSelect1">Calificacion</label>
+                                                    <div class="col-auto star_form_box ">
+                                                        <span class="star_form"><ion-icon name="star" id="star_form_0" class="calification_star "></ion-icon> 
+                                                        <span class="star_form"><ion-icon name="star" id="star_form_1" class="calification_star "></ion-icon>
+                                                        <span class="star_form"><ion-icon name="star" id="star_form_2" class="calification_star "></ion-icon> 
+                                                        <span class="star_form"><ion-icon name="star" id="star_form_3" class="calification_star "></ion-icon>
+                                                        <span class="star_form"><ion-icon name="star" id="star_form_4" class="calification_star "></ion-icon>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <button style="float: right;" type="submit" class="btn btn-primary">Enviar comentario</button>
 
+                                        </div>
+                                    </form>
+                                </div>
+        
+                            </div>
+                        </div> 
+                        
+                    </div>
+                </div>
+                <div class="borderComment">
+                    <div class="comment_container">
+                        <div class="d-flex flex-row comment-row m-t-0 comment_box">
+                            <div class="p-2 comment_img_box" >
+                                <img src="../images/user_profile_empty.png" alt="user" width="50" class="rounded-circle">
+                            </div>
+                            <div class="comment_text">
+                                <h6 class="comment_title">
+                                    <span class="comentary_user" id="user_12">@my_email</span>
+                                    <span class="comentary_star_value " id="user_12_stars">4</span>                                     
+                                    <span class="comentary_iconStar " ><ion-icon name="star"  class="calification_star calification_star_move"></ion-icon> 
+                                    </span>
+                                </h6>  
+                                <div class="comment_text_box">
+                                    <span class="d-block comment_text_line "  id="comment_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident debitis saepe laborum, totam enim perferendis consequatur! Minus, sunt consectetur, itaque placeat assumenda voluptate at eligendi illo vitae quo maiores? </span>
+                                </div>
+                                <div class="delete_comment">
+                                    <ion-icon name="trash"></ion-icon>
+                                </div>
+                                <div class="comment-footer date_container">
+ 
+                                    <span class="text-muted float-right date_comment_txt"> 14 marzo 2021</span> 
+                                </div> 
+                            </div>
+                        </div> 
+                        
+                    </div>
+                </div>
+                <div class="borderComment">
+                    <div class="comment_container">
+                        <div class="d-flex flex-row comment-row m-t-0 comment_box">
+                            <div class="p-2 comment_img_box" >
+                                <img src="../images/user_profile_empty.png" alt="user" width="50" class="rounded-circle">
+                            </div>
+                            <div class="comment_text">
+                                <h6 class="comment_title">
+                                    <span class="comentary_user" id="user_13">@account_email</span>
+                                    <span class="comentary_star_value " id="user_13_stars">2</span>                                     
+                                    <span class="comentary_iconStar " "><ion-icon name="star"  class="calification_star calification_star_move"></ion-icon> 
+                                    </span>
+                                </h6>  
+                                <div class="comment_text_box">
+                                    <span class="d-block comment_text_line " id="comment_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores illo facere aliquam dicta consectetur deleniti temporibus sit et veniam maxime rem? </span>
+                                </div>
+                                <div class="comment-footer date_container"> 
+                                    <span class="text-muted float-right date_comment_txt"> 7 marzo 2021</span> 
+                                </div> 
+                            </div>
+                        </div> 
+                        
+                    </div>
+                </div>
 
+                <div class="borderComment">
+                    <div class="comment_container">
+                        <div class="d-flex flex-row comment-row m-t-0 comment_box">
+                            <div class="p-2 comment_img_box" >
+                                <img src="../images/user_profile_empty.png" alt="user" width="50" class="rounded-circle">
+                            </div>
+                            <div class="comment_text">
+                                <h6 class="comment_title">
+                                    <span class="comentary_user" id="user_14">@account_email</span>
+                                    <span class="comentary_star_value " iid="user_14_stars">3</span>                                     
+                                    <span class="comentary_iconStar " ><ion-icon name="star"  class="calification_star calification_star_move"></ion-icon> 
+                                    </span>
+                                </h6>  
+                                <div class="comment_text_box">
+                                    <span class="d-block comment_text_line "  id="comment_3">Lorem ipsum dolor sit amet consectetur adipisicing elit.  </span>
+                                </div>
+                                <div class="comment-footer date_container"> 
+                                    <span class="text-muted float-right date_comment_txt"> 4 marzo 2021</span> 
+                                </div> 
+                            </div>
+                        </div> 
+                        
+                    </div>
+                </div>
+                <div class="more_comments_btn_box center ">
+                    <input type="button" class="seeMore_comments" value="Ver mas comentarios">
+                </div>
+                <div class="more_comment_box hide_element">
+                    <div class="borderComment">
+                        <div class="comment_container">
+                            <div class="d-flex flex-row comment-row m-t-0 comment_box">
+                                <div class="p-2 comment_img_box" >
+                                    <img src="../images/user_profile_empty.png" alt="user" width="50" class="rounded-circle">
+                                </div>
+                                <div class="comment_text">
+                                    <h6 class="comment_title">
+                                        <span class="comentary_user" id="user_15">@account_email</span>
+                                        <span class="comentary_star_value " id="user_15_stars">5</span>                                     
+                                        <span class="comentary_iconStar " ><ion-icon name="star"  class="calification_star calification_star_move"></ion-icon> 
+                                        </span>
+                                    </h6>  
+                                    <div class="comment_text_box">
+                                        <span class="d-block comment_text_line "  id="comment_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident debitis saepe laborum, totam enim perferendis consequatur! Minus, sunt consectetur, itaque placeat assumenda voluptate at eligendi illo vitae quo maiores? </span>
+                                    </div>
+                                    <div class="comment-footer date_container"> 
+                                        <span class="text-muted float-right date_comment_txt"> 14 febrero 2021</span> 
+                                    </div> 
+                                </div>
+                            </div> 
+                            
+                        </div>
+                    </div>
 
+                    <div class="borderComment">
+                        <div class="comment_container">
+                            <div class="d-flex flex-row comment-row m-t-0 comment_box">
+                                <div class="p-2 comment_img_box" >
+                                    <img src="../images/user_profile_empty.png" alt="user" width="50" class="rounded-circle">
+                                </div>
+                                <div class="comment_text">
+                                    <h6 class="comment_title">
+                                        <span class="comentary_user" id="user_16">@account_email</span>
+                                        <span class="comentary_star_value " id="user_16_stars">4</span>                                     
+                                        <span class="comentary_iconStar " "><ion-icon name="star"  class="calification_star calification_star_move"></ion-icon> 
+                                        </span>
+                                    </h6>  
+                                    <div class="comment_text_box">
+                                        <span class="d-block comment_text_line " id="comment_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores illo facere aliquam dicta consectetur deleniti temporibus sit et veniam maxime rem? </span>
+                                    </div>
+                                    <div class="comment-footer date_container"> 
+                                        <span class="text-muted float-right date_comment_txt"> 13 febrero 2021</span> 
+                                    </div> 
+                                </div>
+                            </div> 
+                            
+                        </div>
+                    </div>
+
+                    <div class="borderComment">
+                        <div class="comment_container">
+                            <div class="d-flex flex-row comment-row m-t-0 comment_box">
+                                <div class="p-2 comment_img_box" >
+                                    <img src="../images/user_profile_empty.png" alt="user" width="50" class="rounded-circle">
+                                </div>
+                                <div class="comment_text">
+                                    <h6 class="comment_title">
+                                        <span class="comentary_user" id="user_17">@account_email</span>
+                                        <span class="comentary_star_value " iid="user_17_stars">3</span>                                     
+                                        <span class="comentary_iconStar " ><ion-icon name="star"  class="calification_star calification_star_move"></ion-icon> 
+                                        </span>
+                                    </h6>  
+                                    <div class="comment_text_box">
+                                        <span class="d-block comment_text_line "  id="comment_3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit amet consectetur adipisicing elit </span>
+                                    </div>
+                                    <div class="comment-footer date_container"> 
+                                        <span class="text-muted float-right date_comment_txt"> 13 febrero 2021</span> 
+                                    </div> 
+                                </div>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 
     <!-- bootstrap and jquery-->
