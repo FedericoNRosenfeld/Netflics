@@ -10,6 +10,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/styles.css" rel="stylesheet">
   <link href="../css/video_player.css" rel="stylesheet">
+  <link href="../css/videoSheet.css" rel="stylesheet">
 
   <!-- Browser Title -->
   <title>Playing Video</title>    
@@ -50,6 +51,59 @@
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque in illum autem ducimus molestias rerum rem mollitia voluptatem consequatur odit! Saepe quidem quis praesentium repellendus vero aut doloribus perferendis error?</p>
     </div>
   </div>
+
+
+<div class="comment_box_container hide_element" id="comment_box_container">
+  <div class="borderComment">
+    <h3 class="center" > Te gusto la pelicula?</h3>
+
+    <h4 class="center" style="     border-bottom:solid 1px darkorange;"> Comparte tu opinion sobre esta pelicula con la comunidad</h4>
+    <div class="comment_container">
+        <div class="d-flex flex-row comment-row m-t-0 comment_box">
+         
+            <div class="p-2 comment_img_box" >
+                <img src="../images/user_profile_empty.png" alt="user" width="50" class="rounded-circle">
+            </div>
+            <div class="comment_text">
+              
+                <div class="comment_text_box ">
+                    <form>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-auto" style="min-width: 200px; width: 60%; margin-bottom: 1%;">
+                                    <label for="exampleFormControlSelect1">Mi comentario</label>
+
+                                    <textarea   class="form-control input_comment" id="input_comment" placeholder="Dejar un comentario sobre la pelicula" ></textarea>
+                                </div>
+                                <div  class="col-auto float-left center" style="padding-left:3%;">
+                                    <label for="exampleFormControlSelect1">Calificacion</label>
+                                    <div class="col-auto star_form_box ">
+                                        <span class="star_form"><ion-icon name="star" id="star_form_0" class="calification_star "></ion-icon> 
+                                        <span class="star_form"><ion-icon name="star" id="star_form_1" class="calification_star "></ion-icon>
+                                        <span class="star_form"><ion-icon name="star" id="star_form_2" class="calification_star "></ion-icon> 
+                                        <span class="star_form"><ion-icon name="star" id="star_form_3" class="calification_star "></ion-icon>
+                                        <span class="star_form"><ion-icon name="star" id="star_form_4" class="calification_star "></ion-icon>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <button style="float: right;" type="submit" class="btn btn-primary">Enviar comentario</button>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div> 
+        
+    </div>
+</div>
+
+
+
+
+</div>
+
 
 
 
@@ -188,6 +242,7 @@
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
  <!-- custom script -->
  <script src="../js/video_player.js"></script>
+ <script src="../js/videoSheet.js"></script>
 
 </body>
 </html>
