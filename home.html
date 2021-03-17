@@ -11,6 +11,7 @@
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/search.css" rel="stylesheet">
   <link href="css/home.css" rel="stylesheet">
+  <link href="css/videoSheet.css" rel="stylesheet">
 
   <!-- Browser Title -->
   <title>Netflics</title>    
@@ -106,7 +107,79 @@
     </nav>
 
 
-    <div class="promo_container"></div>
+    <div class="promo_container">
+        <div class="top_sheet">     
+            <div class="data_container">
+                <div class="title_box">
+                    <h1 class="video_Title">Promo Video</h1>
+                </div>
+                <div class="img_video_sm_box ">
+                    <img class="img_video_sm" src="images/presentations/movie_big.jpg" alt="Pelicula">
+                    
+                    <div class="controls_video_mob">
+                        <div class="controls_video_box_sm ">
+                                <button type="button" class="video_btn_sm rounded-circle  " data-toggle="tooltip" data-placement="top"  id="play_btn">
+                                    <span class=" "><ion-icon class="icon_menu_mg"name="play"></ion-icon></span>
+                                </button>
+                            
+                                <button type="button" class="video_btn_sm rounded-circle addList_btn1" data-toggle="tooltip" data-placement="top" id="addList_btn1" title="Agregar a lista">
+                                    <span class=""><ion-icon class="icon_menu_mg"name="add"></ion-icon></span>
+                                </button>
+            
+                                <button type="button" class="video_btn_sm rounded-circle hide_element addList_btn2" data-toggle="tooltip" data-placement="top" id="addList_btn2" title="Remover de mi lista">
+                                    <span class=""><ion-icon class="icon_menu_mg" name="remove"></ion-icon></span>
+                                </button>
+                                <button  type="button" class="volume_btn_sm rounded-circle" id="audio_btn"> 
+                                    <span class=" "><ion-icon name="volume-mute"></ion-icon> </span>
+                                </button> 
+                             
+                        </div> 
+                            
+                    </div>  
+
+
+                </div>
+                
+                <div class="resume_box textAuto resume_box_dk">
+                    <p class="resume_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nihil quis, ipsum quisquam impedit sit perspiciatis minima inventore nobis, perferendis odio quae quos, esse exercitationem possimus? Quae nihil porro architecto.</p>
+                </div>                   
+            
+            <div class="controls_video_box_bottom">
+                <div class="controls_video_box row">
+                    <button  class="btn_play btn btn_video btn_white_trans" value="Reproducir" id="play_btn"> 
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class=" icon_btn_top"><ion-icon name="play"></ion-icon></span>
+                            </div>
+                            <span style="margin-top:3px">Reproducir </span>
+                        </div>
+                    </button>
+                
+                    <button  class="add_myList btn btn_video addList_btn1 btn_white_trans" value="Agregar a mi lista"  id="addList_btn1">      
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="icon_btn_top"><ion-icon name="add-circle"></ion-icon></span>
+                            </div>
+                            <span style="margin-top:3px" id="addList_btn_text">Agregar a mi lista </span>
+                        </div>                     
+                    </button>
+
+                    <button  class="add_myList btn btn_video hide_element addList_btn2 btn_white_trans" value="Remover de mi lista"  id="addList_btn2">      
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class="icon_btn_top"><ion-icon name="remove-circle"></ion-icon></span>
+                            </div>
+                            <span style="margin-top:3px" id="addList_btn_text">Remover de mi lista </span>
+                        </div>                     
+                    </button>
+
+                    <button  class="volume_btn rounded-circle btn_white_trans" id="audio_btn"> 
+                        <span class=" "><ion-icon name="volume-mute"></ion-icon> </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="watching_container"></div>
     <div class="friday_container"></div>
@@ -188,7 +261,7 @@
 
     <!-- bootstrap and jquery-->
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
 
     <!-- custom script -->
     <script src="js/scripts.js"></script>

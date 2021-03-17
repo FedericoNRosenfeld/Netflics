@@ -295,3 +295,14 @@ p{
 }
 
 
+.item_added_list_btn {
+    background: linear-gradient(
+    to right,
+        rgb(255, 160, 4),
+        rgb(255, 187, 0),
+        rgb(255, 251, 0),
+        rgb(255, 100, 55)
+    ) !important;
+    background-size: 300% 300%;
+    animation: moveBorder 5s alternate infinite;
+}
