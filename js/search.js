@@ -105,12 +105,12 @@ function makeListOfVideos(amount, id) {
         let gender = videoType[Math.floor(Math.random() * 2)]
         let dgen = document.createElement('div');
         dgen.className = "icons-li video_container box_expand";
-        dgen.id = "num"+ i +gender;
+        dgen.id = "num"+ i+"_"+id+"_" +gender;
 
         let img = document.createElement('img');
         img.className = "img-fluid icons-li video_img";
         img.src="../images//presentations/"+gender +""+( Math.floor(Math.random() * 7)) +".png";
-        img.id = "video_img_"+i + gender;
+        img.id = "video_img_"+i +"_"+id+"_" + gender;
 
 
         let icon1 = document.createElement('ion-icon');
@@ -128,11 +128,11 @@ function makeListOfVideos(amount, id) {
         
         let dctrl = document.createElement('div');
         dctrl.className = "video_ctrl hide_element";
-        dctrl.id = "video_ctrl_num"+i + gender;
+        dctrl.id = "video_ctrl_num"+i +"_"+id+"_" + gender;
 
         let ddesc = document.createElement('div');
         ddesc.className = "video_desc hide_element";
-        ddesc.id = "video_desc_num"+i + gender;
+        ddesc.id = "video_desc_num"+i +"_"+id+"_" + gender;
 
         let vdesc = document.createElement('p');
         vdesc.innerHTML = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus maxime consectetur cum laborum aperiam explicabo? Iusto consequuntur numquam facere alias.  Voluptatem velit atque quas necessitatibus accusantium vero. Sequi, possimus?";

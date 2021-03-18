@@ -19,10 +19,14 @@ p{
 
 /* navbar */
 .navbar_desktop{
+    position: fixed;
+    top: 0;
     background-image: linear-gradient(to right, black, black,   rgb(235, 140, 15));
     border-bottom:solid 1px rgb(235, 140, 15)  ;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
     color: white;
+    width: 100%;
+    z-index: 200;
 }
 
 .navbar_mobile{
@@ -34,6 +38,7 @@ p{
     bottom: 0;
     width: 100%;
     text-align: center;
+    z-index: 200;
         
 }
 
