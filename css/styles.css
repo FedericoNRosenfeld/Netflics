@@ -62,15 +62,100 @@ p{
 .navbar_mobile{
     background-image: linear-gradient(to top, black, black,   rgb(235, 140, 15));
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
-    color:  rgb(235, 140, 15);
     position: fixed;
+    color: white;
     left: 0;
     bottom: 0;
     width: 100%;
     text-align: center;
-    z-index: 200;
-        
+    z-index: 200;      
 }
+
+.navbar_mobile_top{
+    display: flex;
+    justify-content: space-between; 
+}
+.menu_navbar_top_icon{
+    margin-left: 20px;
+    margin-top: 5px;
+
+}
+
+#notification_navbar_top.menu_navbar_top_icon{
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+  
+    padding-bottom: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+ 
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+.navbar_mobile_section,.sub_menu_mobile{
+    
+    padding-top: 3px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.navbar_mobile_section div p {
+    font-size: 14px;
+}
+
+.search_mobile{
+    padding-left: 1%;
+    padding-right: 1%;
+    height: 32px;
+    background: red;
+}
+
+#search_mobile_bar{
+    width: 98%;
+    margin-top: 5px;
+}
+
+
+
+
+.icon_navbar_m{
+    height: 32px;
+    width: 32px;
+    color: white;
+}
+
+
 
 .empty_bottom_space{
     position: relative;
@@ -82,8 +167,11 @@ p{
 .menu_section{
     background-image: linear-gradient(to bottom, black, black,   rgb(235, 140, 15));
     border-bottom:solid 1px rgb(235, 140, 15)  ;
-
+    padding-bottom: 3px;
 }
+
+
+
 .navbar_container{
     margin-left: 10px;
     margin-right: 10px;
@@ -126,15 +214,10 @@ p{
     outline: none;
 }
 
-
-
 .dropdown-item:hover{
     background-color: rgb(255, 119, 0);
     color: white;
 }
-
-
-
 
 .dropdown-menu .nav-item:hover{
     background-color: rgba(0, 0, 0, .15);
@@ -196,9 +279,6 @@ p{
   }
 
 
-.menu_section{
-    padding-bottom: 10px;
-}
 
 
 .invert_color{
@@ -281,13 +361,17 @@ p{
     display: none;
     position: absolute;
     right: 0;
-    top: 22px;
+    top: 31px;
     background-color: #f09711;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-
+  
+  .dropdown-divider{
+    border-top: 1px solid #291601;
+  
+}
   .dropdown-content a {
     float: none;
     color: black;
@@ -298,14 +382,21 @@ p{
   }
   
   .dropdown-content a:hover {
-    background-color: rgb(236, 144, 22);
+    background-color: #f09711;
   }
   
   .dropdown:hover .dropdown-content {
     display: block;
   }
   
+  #myDropdown{
+    background: rgba(199, 115, 5,.8);
 
+  }
+
+.user_dropdown_menu a span{
+    padding-left: 5px;
+}
   
 .mobile_logo_user_section{
     position: fixed;

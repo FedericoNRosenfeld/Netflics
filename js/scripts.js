@@ -17,10 +17,37 @@ function notifications_handler(notifications){
 }
 
 
-$("#search_icon_mobile").click(function(e){
-    $("#search_mobile_screen" ).toggleClass("hide_element");  
+$("#search_icon_b").click(function(e){
+    $("#search_mobile" ).toggleClass("hide_element");  
 });
 
+
+
+// dropdown
+let inDropdown = false;
+
+$("#navbarDropdown").mouseenter(function(){
+     $("#myDropdown").css( {'display': 'block' });
+});
+
+$("#navbarDropdown").mouseleave(function(){
+
+    setTimeout( function(){
+        if(!inDropdown)
+            $("#myDropdown").css( {'display': 'none' });
+
+    }, 300);
+});
+
+
+$("#myDropdown").mouseenter(function(){
+    inDropdown = true;
+});
+
+$("#myDropdown").mouseleave(function(){
+    inDropdown = false;
+    $("#myDropdown").css( {'display': 'none' });
+});
 
 
 
