@@ -196,8 +196,10 @@ function makeCarousel( id, title, elementsAmount, continueWatching) {
 */ 
 //document.getElementsByTagName("BUTTON").setAttribute("type", "button");
     
+$(".btn_list_addremove").click(function(){
+    $(".btn_list_addremove").toggleClass("hide_element");
 
-
+});
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
