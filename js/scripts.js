@@ -23,26 +23,6 @@ $("#search_icon_mobile").click(function(e){
 
 
 
-function createVideoWindow(id){
-
-    let element = $("#"+id+"");
-    element.toggleClass("generatePreview");
-
-    let description = $("#video_desc_"+id+"");
-    description.toggleClass("hide_element"); 
-    
-    let control = $("#video_ctrl_"+id+"");
-    control.toggleClass("hide_element"); 
-
-
-}
-
-
-$(document).ready(function(){
-    $(".box_expand").hover(function(){
-        document.getElementById(this.id).addEventListener("mouseenter", createVideoWindow(this.id));
-        
-    })});
 
 //for random img
 let listData = ['m','s']; 
@@ -67,49 +47,9 @@ function makeListOfVideos(i, id,newSerie) {
     img.id = "video_img_"+i +"_"+id+"_" + gender;
 
 
-    let icon1 = document.createElement('ion-icon');
-    icon1.name = "play-circle-outline";
-
-    let icon2 = document.createElement('ion-icon');
-    icon2.name = "volume-mute-outline";
-
-    let icon3 = document.createElement('ion-icon');
-    icon3.name = "add-circle-outline";
-    
-    let icon4 = document.createElement('ion-icon');
-    icon4.name = "information-circle-outline";
-    
-    let dctrl = document.createElement('div');
-    dctrl.className = "video_ctrl hide_element center";
-    dctrl.id = "video_ctrl_num"+i +"_"+id+"_" + gender;
-
-    let ddesc = document.createElement('div');
-    ddesc.className = "video_desc hide_element";
-    ddesc.id = "video_desc_num"+i +"_"+id+"_" + gender;
-
-    let vbar_continue = document.createElement('div');
-    vbar_continue.className = " continue_watching_bar "+ newSerie;
-    vbar_continue.id = "continue_watching_bar"+i +"_"+id+"_" + gender;
-
-    let dbar_continue = document.createElement('div');
-    dbar_continue.className = "continue_watching_box hide_element ";
-    dbar_continue.id = "continue_watching_box"+i +"_"+id+"_" + gender;
-
-
-    let vdesc = document.createElement('p');
-    vdesc.innerHTML = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus maxime consectetur cum laborum aperiam explicabo? Iusto consequuntur numquam facere alias.  Voluptatem velit atque quas necessitatibus accusantium vero. Sequi, possimus?";
-    
-    ddesc.appendChild(vdesc);
-    dctrl.appendChild(icon1);
-    dctrl.appendChild(icon2);
-    dctrl.appendChild(icon3);
-    dctrl.appendChild(icon4);
 
     dgen.appendChild(img);    
-    dgen.appendChild(vbar_continue);
-
-    dgen.appendChild(dctrl);
-    dgen.appendChild(ddesc);
+ 
 
     return dgen;
 
@@ -155,7 +95,7 @@ function makeCarousel( id, title, elementsAmount, continueWatching) {
     title1.innerHTML = title
 
     let div3 = document.createElement('div');
-    div3.className = "indicadores"; 
+    div3.className = "indicadores hide_element"; 
     div3.id = "indicadores_"+id;
 
     div2.appendChild(title1);
@@ -172,13 +112,13 @@ function makeCarousel( id, title, elementsAmount, continueWatching) {
 
     
     let btn_l = document.createElement('button');
-    btn_l.className = "flecha-izquierda"; 
-    btn_l.id = "flecha_izquierda_"+id;
+    btn_l.className = "arrow-left arrow-btn"; 
+    btn_l.id = "arrow_left_"+id;
     btn_l.role = "button";
 
     let btn_r = document.createElement('button');
-    btn_r.className = "flecha-derecha"; 
-    btn_r.id = "flecha_derecha_"+id;
+    btn_r.className = "arrow-right arrow-btn"; 
+    btn_r.id = "arrow_right_"+id;
     btn_r.role = "button";
 
 
@@ -216,18 +156,21 @@ function makeCarousel( id, title, elementsAmount, continueWatching) {
             <div class="indicadores"></div>
         </div>
         <div class="contenedor-principal">
-            <button role="button" id="flecha_izquierda" class="flecha-izquierda "><ion-icon name="chevron-back-outline"></ion-icon></button>
+            <button role="button" id="arrow_left" class="arrow-left arrow-btn"><ion-icon name="chevron-back-outline"></ion-icon></button>
             <div class="contenedor-carousel">
                 <div class="carousel" id="acategory"> 
 
                 </div>           
             </div>
-            <button role="button" id="flecha_derecha" class="flecha-derecha"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+            <button role="button" id="arrow_right" class="arrow-right arrow-btn"><ion-icon name="chevron-forward-outline"></ion-icon></button>
           
         </div>
     </div>
 */ 
+//document.getElementsByTagName("BUTTON").setAttribute("type", "button");
+    
 
 
-
-    //document.getElementsByTagName("BUTTON").setAttribute("type", "button");
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});

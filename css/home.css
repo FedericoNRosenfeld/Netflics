@@ -155,7 +155,7 @@
 
 .indicadores{
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     right: 1%;
     margin-right: 1%;
 }
@@ -187,10 +187,12 @@
 }
 
  .contenedor-carousel{
+    z-index: 1 !important;
     width: 100%;
     padding: 20px 0;
-    overflow: hidden;
-
+    overflow-x: hidden;
+    overflow-y:hidden;
+    height: auto;
     scroll-behavior: smooth; /* allows scroll with page animation*/
  }
 
@@ -220,7 +222,7 @@
         min-width: 18.5% ;
  
      }
-     .flecha-izquierda,  .flecha-derecha{
+     .arrow-left,  .arrow-right{
          width: 40px !important;
          font-size: 25px !important;
 
@@ -233,7 +235,7 @@
         width: 23.5%;
         min-width: 23.5% ;      
      } 
-     .flecha-izquierda,  .flecha-derecha{
+     .arrow-left,  .arrow-right{
         width: 30px !important;
         font-size: 20px !important;
 
@@ -247,7 +249,7 @@
         width: 30.8%;
         min-width: 30.8% ;     
      } 
-     .flecha-izquierda,  .flecha-derecha{
+     .arrow-left,  .arrow-right{
         width: 30px !important;
         font-size: 20px !important;
 
@@ -260,7 +262,7 @@
         width: 48.5%;
         min-width: 48.5% ;     
      } 
-     .flecha-izquierda,  .flecha-derecha{
+     .arrow-left,  .arrow-right{
         width: 30px !important;
         font-size: 20px !important;
 
@@ -274,9 +276,6 @@
 }
 
 
-.video.hover{
-   
- } 
 
  .video .video_img_a{
      width: 100%;
@@ -285,7 +284,7 @@
 
  }
 /*#region arrows carousel */
-.flecha-izquierda,  .flecha-derecha{
+.arrow-left,  .arrow-right{
     position: absolute;
     border: none;
     background: rgba(0, 0, 0, 0.4);
@@ -298,20 +297,23 @@
     z-index: 10;
     transition: .2s ease all;
     outline: none !important;
+    cursor: pointer;
 
 }
 
-.flecha-izquierda:hover,  .flecha-derecha:hover{
+.arrow-left:hover,  .arrow-right:hover{
 
     background: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+
 }
 
 
-.flecha-izquierda{
+.arrow-left{
     left: 0;
 }
 
-.flecha-derecha{
+.arrow-right{
     right: 0;
 }
 /*#endregion arrows carousel */

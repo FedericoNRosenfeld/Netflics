@@ -1,8 +1,11 @@
 
 makeCarousel( "continue_warching", "Continuar viendo", 20, "");
 makeCarousel( "recomended_4u", "Recomendados para vos", 20, "hide_element");
+makeCarousel( "oldViernes_sct", "Populares del viernes pasado", 20, "hide_element");
 makeCarousel( "action_sct", "Accion", 20, "hide_element");
 makeCarousel( "drama_sct", "Drama", 20, "hide_element");
+makeCarousel( "anime_sct", "Anime", 20, "hide_element");
+
 
 
 $("#search_desk").on("keypress", function (e) {
@@ -43,12 +46,14 @@ $(".addList_btn1").click( function(){
 $(".addList_btn2").click( function(){
     $(".addList_btn1").toggleClass("item_added_list_btn");
     $(".addList_btn2").toggleClass("hide_element");
-
     $(".addList_btn1").toggleClass("hide_element");
 });
 
-
-
+$("#see_episodes").click( function(){
+    $("#see_episodes").toggleClass("active_icon_orange");
+    $("#resume_episodes_box").toggleClass("hide_element");
+    $("#serie_episodes_box").toggleClass("hide_element");  
+});
 
 // --------------------------------------- Videos Carousel 
 
@@ -59,8 +64,8 @@ allsections_container_container.forEach( section_container=> {
 
     fila = section_container.children[0].children[1].children[1]; // contenedor-carousel
     videos = fila.children[0];
-    flechaIzquierda = section_container.children[0].children[1].children[0];
-    flechaDerecha = section_container.children[0].children[1].children[2];
+    leftArrow = section_container.children[0].children[1].children[0];
+    rightArrow = section_container.children[0].children[1].children[2];
 
 
     
@@ -77,14 +82,14 @@ allsections_container_container.forEach( section_container=> {
 } );
 
 
-const flechasIzquierda = document.querySelectorAll(".flecha-izquierda");
-const flechasDerecha = document.querySelectorAll(".flecha-derecha");
+const leftArrows = document.querySelectorAll(".arrow-left");
+const rightArrows = document.querySelectorAll(".arrow-right");
 
-flechasIzquierda.forEach(flecha => {
+leftArrows.forEach(arrow => {
     
-    document.getElementById(flecha.id).addEventListener("click", function(){
+    document.getElementById(arrow.id).addEventListener("click", function(){
 
-        let id =  flecha.id.replace("flecha_izquierda_", "")
+        let id =  arrow.id.replace("arrow_left_", "")
         let filaId =  "contenedor-carousel_"+id;
         
         console.log("id:"+id);
@@ -101,10 +106,10 @@ flechasIzquierda.forEach(flecha => {
 
 });
 
-flechasDerecha.forEach(flecha => {
+rightArrows.forEach(arrow => {
     
-    document.getElementById(flecha.id).addEventListener("click", function(){
-        let id =  flecha.id.replace("flecha_derecha_", "")
+    document.getElementById(arrow.id).addEventListener("click", function(){
+        let id =  arrow.id.replace("arrow_right_", "")
         let filaId =  "contenedor-carousel_"+id;
         console.log("id:"+id);
         document.getElementById(filaId).scrollLeft +=  document.getElementById(filaId).offsetWidth
@@ -150,29 +155,50 @@ function  createIndicators(id){
        
         let button_indicator = document.createElement('button');
         button_indicator.className = "btn_page_indicator";
+        button_indicator.id = "btn_page_indicator_"+id;
+
         if (i ==0){
             button_indicator.className +=" active";
         }   
 
 
         indicadores.appendChild(button_indicator);
-
-        button_indicator.addEventListener('click', function(e){
+        /* Not working
+        document.getElementById("btn_page_indicator_"+id).addEventListener('click', function(e){
+            let fila = document.getElementById("contenedor-carousel_"+id);
             fila.scrollLeft = i * fila.offsetWidth;
             document.querySelector("#indicadores_"+id+" .active").classList.remove("active");
             e.target.classList.add("active");
-        });
+        });*/
         
     } 
 }
 
 
+const arrows = document.querySelectorAll(".arrow-btn");
+
+arrows.forEach(arrow => {
+    
+    let subId =  arrow.id.replace("arrow_left_", "");
+    let trueId =  subId.replace("arrow_right_", "");
+    console.log ("trueId: "+trueId);
+    document.getElementById(arrow.id).addEventListener("mouseenter", function(){
+        console.log("trueId_inside:"+trueId);
+        document.getElementById("indicadores_"+trueId).classList.remove("hide_element")
+       
+    });
+
+    document.getElementById(arrow.id).addEventListener("mouseleave", function(){
+        document.getElementById("indicadores_"+trueId).classList.add("hide_element")
+       
+    });
+
+});
 
 
 window.addEventListener ("resize", function(){
 
     allsections_container_container.forEach( section_container=>  {
-
         getSizeBtnPageCarousel(section_container.children[0].children[1].children[1].children[0].childElementCount);  // amount of videos  
         createIndicators(section_container.id);
     });
@@ -181,7 +207,6 @@ window.addEventListener ("resize", function(){
 
 
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
     allsections_container_container.forEach( section_container=>  {
         getSizeBtnPageCarousel(section_container.children[0].children[1].children[1].children[0].childElementCount);  // amount of videos  
         createIndicators(section_container.id);
@@ -190,5 +215,64 @@ $(document).ready(function(){
 
 
 
+//------------------------------------- info box on hover
 
 
+
+
+function  prepareDescriptionBox(element){
+    let img = element.children[0];
+    let offset = $(element).offset();
+    var width = $(img).width();
+    width+= width/4;
+    console.log("img:"+ $(img).width() );
+    let top = offset.top  + "px";
+    var left = offset.left - (width/10);
+
+
+    if (left < 20){
+        console.log("sss");
+        left =20;
+    }
+    left+=  "px";
+    console.log("left:"+ left);
+    $('#thebox').css( {'position': 'absolute','top': top, 'left': left, 'width':width });
+}
+
+
+let isInside= false;
+let isAnother= false;
+
+
+
+$(".box_expand").mouseenter(function(){
+    isAnother= true;    
+    $("#thebox").addClass("hide_element");
+
+    prepareDescriptionBox(this);
+    setTimeout(function(){
+        $("#thebox").removeClass("hide_element");
+    },100);
+});
+
+$(".box_expand").mouseleave(function(){
+    isAnother= false;    
+
+    setTimeout( function(){
+        if( (!isInside) && (!isAnother)){
+            $("#thebox").addClass("hide_element");
+        } 
+    }, 100);
+
+});
+
+
+$("#thebox").mouseenter(function(){
+
+    isInside= true;
+});
+
+$("#thebox").mouseleave(function(){
+    isInside= false;
+    $("#thebox").addClass("hide_element");
+});
