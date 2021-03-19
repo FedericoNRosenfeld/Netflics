@@ -20,7 +20,135 @@
 
 </head>
 <body>
+ 
+    <div class="navbar_desktop logo_top_center center align-elements">
+        <div class="" >
+            <div id="menu_navbar_top" class="menu_navbar_top_icon">
+                <ion-icon name="menu" class="icon_navbar_m"></ion-icon>
+            </div>
+        </div> 
+        <div class="container" style="flex: 1;">
+            <a class="navbar-brand link_style" href="../home.html"><img src="../images/logo.png" alt="Netflics" ></a>
+        </div>
+        <div class="float-right" >
+            <div id="notification_navbar_top" class="menu_navbar_top_icon">
+                <ion-icon name="notifications" class="icon_navbar_m"></ion-icon>
+            </div>
+        </div> 
+    </div>
+
+    <div id="mySidenav" class="sidenav center">
+        
+        <a class="  " href="#">
+            <img id="usr_img" class="icon-base-size" src="../images/user_profile_empty.png" alt="Usuario" >                                             
+        </a>                                              
+        <span>User1</span>
+        <div class="dropdown-divider "></div>
+
+        <a href="series_movies.html?type=series">Series</a>
+        <a href="series_movies.html?type=movies">Peliculas</a>
+        <a href="#">Mis Listas</a>
+        <div class="dropdown-divider "></div>
+
+        <a class="icons-li" href="YourAccount.html">Mi Cuenta</a> 
+        <a class="icons-li" href="faq.html">Centro de ayuda</a> 
+        <div class="dropdown-divider "></div>
+        <a class="icons-li" href="Index.html">Cerrar sesion</a> 
+
+
+      </div>
+      
+    <!-- Desktop Navbar-->
+    <nav class="navbar navbar_desktop navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xl">
+        <div class="container remove_empty_spaces " >
+            <!-- Icono modificado de: https://www.flaticon.es/-->
+            <a class="navbar-brand link_style"  href="../home.html"><img src="../images/logo.png" alt="Netflics" ></a>
     
+            <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav mr-auto">
+                    <!-- mr-auto botones lado izquierdo, ml-auto botones lado derecho-->
+                    <li class="nav-item item-space active">
+                    <a id="nav_Home" class="nav-link link_style textAuto" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item item-space">
+                    <a id="nav_Series" class="nav-link link_style textAuto" href="#">Series</a>
+                    </li>
+                    <li class="nav-item item-space">
+                    <a id="nav_videos" class="nav-link link_style textAuto" href="#">Peliculas</a>
+                    </li>
+                    <li class="nav-item item-space">
+                    <a id="nav_favoritos" class="nav-link link_style textAuto" href="#">Mis Listas</a>
+                    </li>         
+                </ul>
+            </div>
+
+
+            <div class="content_right ">
+                <ul>
+                
+                
+                    <!-- User -->
+                    <li class="icons-li m_rightSide">               
+                        <div class="desktop_user dropdown" style="float:right;">
+                            <a class="icons-li nav-link dropdown-toggle dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img id="usr_img" class="icon-base-size" src="../images/user_profile_empty.png" alt="Usuario" >     
+                            </a>
+                            <div class="dropdown center">
+                                <div id="myDropdown" class="dropdown-content">
+                                    <div class="user_ctrl_box center">
+                                        <div class="user_dropdown_menu">
+                                            <a class="icons-li   " href="#">
+                                                <img id="usr_img" class="icon-base-size" src="../images/user_profile_empty.png" alt="Usuario" >
+                                                <span>User1</span>                                          
+                                            </a>
+                                        </div>
+                                        <div class="user_dropdown_menu">
+                                            <a class="icons-li   " href="#">
+                                                <img id="usr_img" class="icon-base-size" src="../images/user_profile_empty.png" alt="Usuario" >
+                                                <span>User2</span>                                          
+                                            </a>                                           
+                                        </div>
+                                        <div class="dropdown-divider "></div>
+                                        <a class="icons-li" href="#">Mi Cuenta</a> 
+                                        <a class="icons-li" href="#">Centro de ayuda</a> 
+                                        <div class="dropdown-divider "></div>
+                                        <a class="icons-li" href="#">Cerrar sesion</a> 
+                                    </div>   
+                                </div>
+                            </div>                             
+                        </div>                                                     
+                    </li>
+                    
+                    <!-- Notifications -->  
+                    <li class="icons-li item-space m_rightSide">
+                        <div class="desktop_notifications">
+                            <a id="notif_off" class="notif_img_d link_style"  href="#"><img  id="notif_img_off_d"class=" notif_img icon-base-size" src="../images/notification_no.png" alt="Notificaciones" ></a>
+                            <a id="notif_on" class="notif_img_d  link_style hide_element"  href="#"><img id="notif_img_on_d" class="notif_img icon-base-size" src="../images/notification_yes.png" alt="Notificacion_activa" ></a>
+                        </div>
+                    </li>
+
+                    <!-- Search Bar-->
+
+                    <li class="icons-li item-space m_rightSide ">
+                        <div class="desktop_search" >
+                            <div action="" class="search-form" >
+                                <div class="form-group has-feedback ">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <div class=" form-control-feedback ">              		
+                                        <span class="glyphicon "><img id="search_icon" class="search_icon  glyphicon" src="../images/search.png" alt="Notificacion_activa" > </span>                                                 
+                                    </div>                            
+                                    <input type="text" class="form-control" name="search" id="search_desk" placeholder="Buscar Series o Peliculas ">
+                                </div>
+                            </div>                  
+                        </div>                 
+                    </li>
+                    
+                </ul>
+            </div>
+        </div> <!-- container -->
+        
+    </nav>
+
 <div class="searchResult_container float-left">   
     <div class="searchWord_container float-left ">
         <h3 class="title_section icons-li ">
@@ -67,7 +195,7 @@
 
     <div class="videos_list float-left icons-li container-fluid  float-left">
         <div class="float-left recomendation_text">
-            <h3>Populares de este viernes </h3>        
+            <h3>Populares del viernes pasado </h3>        
         </div>
     
         <div class="center" id="fridayList" >                
@@ -111,6 +239,39 @@
     </div>
 </div>
 
+<div class="empty_bottom_space" id="bottom_space">.</div>
+
+<!-- Mobile Navbar-->
+
+
+    <div class="navbar_mobile">
+        <div class="hide_element" id="search_mobile" >
+            <input type="text" class="search_mobile_bar"  name="search" id="search_mobile_bar" placeholder="Buscar Series o Peliculas ">
+        </div>
+        
+        
+        <div class="navbar_mobile_section">
+            <div class="" >
+                <a href="../home.html"><ion-icon name="home" class="icon_navbar_m"></ion-icon></a>
+                <p>Inicio</p>
+            </div>
+            
+
+            <div class="" >
+                <div class="search_icon_b" id="search_icon_b">
+                    <a href="#"><ion-icon name="search"  class="icon_navbar_m"></ion-icon></a>
+                </div>
+                <p>Buscar</p>
+            </div>
+
+            <div class="" >
+                <a href="#"><ion-icon name="download-outline" class="icon_navbar_m"></ion-icon></a>
+                <p>Descargas</p>
+            </div>   
+                       
+        </div>
+    </div>
+
 <!-------------------------------------------------------------------->   
 
     <!-- bootstrap and jquery-->
@@ -119,6 +280,7 @@
     <!-- custom script -->
     <script src="../js/search.js"></script>
     <script src="../js/scripts.js"></script>
+    <script src="../js/navbar.js"></script>
 
     <!--IonicIcons https://ionicons.com/usage -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>

@@ -1,16 +1,15 @@
 
 
 .searchResult_container{
-    background: rgba(36, 23, 3, .5);
     color: white;
-    margin: 1%;
-    margin-top: 3%;
+    margin: 2%;
+    margin-top: 70px;
 }
 
 
 .searchWord_container ,.recomendation_text{
     width: 100%;
-    border-bottom: solid 1px orange ;
+    border-bottom: solid 1px rgb(235, 140, 15) ;
 
 }
 
@@ -19,12 +18,14 @@
     font-size: 14px;
 }
 .tx_orange{
-    color: orange;
+    color: rgb(235, 140, 15);
 }
+
 .videos_list{
     padding-top: 1%;
     vertical-align: middle;
     margin-bottom: 1%;
+ 
 }
 
 .loadData{
@@ -41,7 +42,9 @@
 }
 
 .video_container{
-    margin:1%
+    margin:1%;
+    flex: 1 ;
+
 } 
 .recomendation_text{
     margin-bottom: 2%;
@@ -64,7 +67,7 @@
  }
 
  .active_filter{
-    color: orange;     
+    color: rgb(235, 140, 15);     
  }
 
 

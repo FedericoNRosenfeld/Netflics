@@ -8,33 +8,6 @@ makeCarousel( "anime_sct", "Anime", 20, "hide_element");
 
 
 
-document.getElementById("search_desk").addEventListener( "keydown", function( e ) {
-        var keyCode = e.code;
-      
-        if (keyCode == 'Enter'){
-            window.location.href = "subPages/searchResult.html?search="+document.getElementById("search_desk").value ;
-        }
-});  
-
-document.getElementById("search_mobile_bar").addEventListener( "keydown", function( e ) {
-    var keyCode = e.code;
-  
-    if (keyCode == 'Enter'){
-        window.location.href = "subPages/searchResult.html?search="+document.getElementById("search_mobile_bar").value ;
-    }
-});  
-
-let closed = true;
-document.getElementById("menu_navbar_top").addEventListener( "click", function(  ) {
-    if(closed){
-        document.getElementById("mySidenav").style.width = "150px";
-        closed= false; 
-    }
-    else{
-        document.getElementById("mySidenav").style.width = "0";
-        closed= true; 
-    }
-});
 
 
 

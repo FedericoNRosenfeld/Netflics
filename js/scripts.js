@@ -198,19 +198,8 @@ function makeCarousel( id, title, elementsAmount, continueWatching) {
     
 
 
-function    resizeEmptyBottom(){
-    let navbar_mobile = $(".navbar_mobile");
-    let empty_space = $(".empty_bottom_space");
-    let height = navbar_mobile.height();
-    empty_space.css({ 'height':height })
-}
-
-window.addEventListener ("resize", function(){
-    resizeEmptyBottom();
-} );
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
-    resizeEmptyBottom();
 });
 
