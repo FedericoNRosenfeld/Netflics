@@ -165,7 +165,6 @@ function  prepareDescriptionBox(element){
         left =20;
     }
     left+=  "px";
-    console.log("left:"+ left);
     $('#thebox').css( {'position': 'absolute','top': top, 'left': left, 'width':width });
 }
 
@@ -175,9 +174,11 @@ function recall(){
 
     let isInside= false;
     let isAnother= false;
+    let continueWatching = false;
     $(".box_expand").mouseenter(function(){
         isAnother= true;    
         $("#thebox").addClass("hide_element");
+        continueWatching = this.children[0].id !== this.children[0].id.replace("continue_warching","");
 
         prepareDescriptionBox(this);
         setTimeout(function(){
@@ -197,9 +198,16 @@ function recall(){
     });
 
 
+   
     $("#thebox").mouseenter(function(){
-
         isInside= true;
+        let continue_w = this.children[0].children[0].children[1];
+        if (continueWatching){
+            $(continue_w).removeClass("hide_element");  
+        }
+        else
+            $(continue_w).addClass("hide_element");  
+
     });
 
     $("#thebox").mouseleave(function(){

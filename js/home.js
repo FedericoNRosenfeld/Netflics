@@ -8,11 +8,6 @@ makeCarousel( "anime_sct", "Anime", 20, "hide_element");
 
 
 
-$("#search_desk").on("keypress", function (e) {
-    console.log("jquery:"+ e.keyCode);
-});
-
-
 document.getElementById("search_desk").addEventListener( "keydown", function( e ) {
         var keyCode = e.code;
       
@@ -22,9 +17,7 @@ document.getElementById("search_desk").addEventListener( "keydown", function( e 
 });  
 
 document.getElementById("search_icon_mobile").addEventListener('click', function(e) {
-    console.log(document.getElementById("search_mobile_screen").classList);
         $("#search_mobile_screen" ).toggleClass("hide_element");  
-        console.log(document.getElementById("search_mobile_screen").classList);
     });
     
 
@@ -92,7 +85,6 @@ leftArrows.forEach(arrow => {
         let id =  arrow.id.replace("arrow_left_", "")
         let filaId =  "contenedor-carousel_"+id;
         
-        console.log("id:"+id);
 
         document.getElementById(filaId).scrollLeft-=  document.getElementById(filaId).offsetWidth
  
@@ -111,7 +103,6 @@ rightArrows.forEach(arrow => {
     document.getElementById(arrow.id).addEventListener("click", function(){
         let id =  arrow.id.replace("arrow_right_", "")
         let filaId =  "contenedor-carousel_"+id;
-        console.log("id:"+id);
         document.getElementById(filaId).scrollLeft +=  document.getElementById(filaId).offsetWidth
         
         let indicatorActivo = document.querySelector("#indicadores_"+id+" .active");
@@ -181,9 +172,7 @@ arrows.forEach(arrow => {
     
     let subId =  arrow.id.replace("arrow_left_", "");
     let trueId =  subId.replace("arrow_right_", "");
-    console.log ("trueId: "+trueId);
     document.getElementById(arrow.id).addEventListener("mouseenter", function(){
-        console.log("trueId_inside:"+trueId);
         document.getElementById("indicadores_"+trueId).classList.remove("hide_element")
        
     });
@@ -224,31 +213,29 @@ function  prepareDescriptionBox(element){
     let img = element.children[0];
     let offset = $(element).offset();
     var width = $(img).width();
-    width+= width/4;
-    console.log("img:"+ $(img).width() );
+    width+= width/3;
     let top = offset.top  + "px";
     var left = offset.left - (width/10);
 
 
     if (left < 20){
-        console.log("sss");
         left =20;
     }
     left+=  "px";
-    console.log("left:"+ left);
     $('#thebox').css( {'position': 'absolute','top': top, 'left': left, 'width':width });
 }
 
 
 let isInside= false;
 let isAnother= false;
-
+let continueWatching = false;
 
 
 $(".box_expand").mouseenter(function(){
     isAnother= true;    
     $("#thebox").addClass("hide_element");
-
+   
+    continueWatching = this.children[0].id !== this.children[0].id.replace("continue_warching","");
     prepareDescriptionBox(this);
     setTimeout(function(){
         $("#thebox").removeClass("hide_element");
@@ -268,8 +255,14 @@ $(".box_expand").mouseleave(function(){
 
 
 $("#thebox").mouseenter(function(){
-
     isInside= true;
+    let continue_w = this.children[0].children[0].children[1];
+    if (continueWatching){
+        $(continue_w).removeClass("hide_element");  
+    }
+    else
+        $(continue_w).addClass("hide_element");  
+
 });
 
 $("#thebox").mouseleave(function(){
