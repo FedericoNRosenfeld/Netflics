@@ -2,7 +2,7 @@
 
 var goNext = false;
 var isPaused = false;
-var videoTime= 0; // In seconds
+var videoTime= 5; // In seconds
 var currentTime = 0; // In seconds
 var isLoading= true;
 
@@ -22,7 +22,7 @@ setTimeout(
     function(){
         removeLoading()
         update_progressbar();   
-    }, 1000);
+    }, 2000);
     
 }
 
@@ -62,7 +62,7 @@ function update_progressbar(){
                     document.getElementById("loadingVideoScene").classList.remove("hide_element");
                 }            
             }
-        }, 50);
+        }, 1000);
 
     }  
 }

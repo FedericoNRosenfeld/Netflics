@@ -66,19 +66,6 @@ function makeRelatedList(search_word) {
     }
 }
 
-// On mouse over 
-function createTrailerBox(id){
-
-    let element = $("#"+id+"");
-    element.toggleClass("generatePreview");
-
-    let description = $("#video_desc_"+id+"");
-    description.toggleClass("hide_element"); 
-    
-    let control = $("#video_ctrl_"+id+"");
-    control.toggleClass("hide_element"); 
-
-}
 
 
 
@@ -104,70 +91,27 @@ function makeListOfVideos(amount, id) {
 
         let gender = videoType[Math.floor(Math.random() * 2)]
         let dgen = document.createElement('div');
-        dgen.className = "icons-li video_container box_expand";
-        dgen.id = "num"+ i +gender;
-
-        let img = document.createElement('img');
-        img.className = "img-fluid icons-li video_img";
-        img.src="../images//presentations/"+gender +""+( Math.floor(Math.random() * 7)) +".png";
-        img.id = "video_img_"+i + gender;
-
-
-        let icon1 = document.createElement('ion-icon');
-        icon1.name = "play-circle-outline";
-
-        let icon2 = document.createElement('ion-icon');
-        icon2.name = "volume-mute-outline";
-
-        let icon3 = document.createElement('ion-icon');
-        icon3.name = "add-circle-outline";
-     
-        let icon4 = document.createElement('ion-icon');
-        icon4.name = "information-circle-outline";
+        dgen.className = "video box_expand "; 
+        dgen.id = "num"+ i+"_"+id+"_" +gender;
 
         
-        let dctrl = document.createElement('div');
-        dctrl.className = "video_ctrl hide_element";
-        dctrl.id = "video_ctrl_num"+i + gender;
-
-        let ddesc = document.createElement('div');
-        ddesc.className = "video_desc hide_element";
-        ddesc.id = "video_desc_num"+i + gender;
-
-        let vdesc = document.createElement('p');
-        vdesc.innerHTML = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus maxime consectetur cum laborum aperiam explicabo? Iusto consequuntur numquam facere alias.  Voluptatem velit atque quas necessitatibus accusantium vero. Sequi, possimus?";
-
-        ddesc.appendChild(vdesc);
-        dctrl.appendChild(icon1);
-        dctrl.appendChild(icon2);
-        dctrl.appendChild(icon3);
-        dctrl.appendChild(icon4);
+        let img = document.createElement('img');
+        img.className = "video_img_a";
+        img.src="../images/presentations/"+gender +""+( Math.floor(Math.random() * 7)) +".png";
+        img.id = "video_img_"+i +"_"+id+"_" + gender;
 
         dgen.appendChild(img);
-        dgen.appendChild(dctrl);
-        dgen.appendChild(ddesc);
-
+      
         loadData.appendChild(dgen);
     }
     savedGeneratedData.push(loadData);
     
 }
 
-function generateFreeContent( totalElements, id ){
-    makeListOfVideos(totalElements, id);  
-}
 
-
-generateFreeContent(16, "searchList"); 
-generateFreeContent(12, "recomendedList"); 
-generateFreeContent(8, "fridayList"); 
-
-$(document).ready(function(){
-    $(".box_expand").hover(function(){
-        document.getElementById(this.id).addEventListener("mouseenter", createTrailerBox(this.id));
-        
-    })});
-
+makeListOfVideos(20, "searchList"); 
+makeListOfVideos(15, "recomendedList"); 
+makeListOfVideos(10, "fridayList"); 
 
 
 function filterItems(filter, id){
@@ -197,17 +141,87 @@ function filterItems(filter, id){
 
     }
 
-    $(document).ready(function(){
-        $(".box_expand").hover(function(){
-            document.getElementById(this.id).addEventListener("mouseenter", createTrailerBox(this.id));
-            
-        })});
     
       
 }
 
+
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+function  prepareDescriptionBox(element){
+    let img = element.children[0];
+    let offset = $(element).offset();
+    var width = $(img).width();
+    width+= width/4;
+    let top = offset.top  + "px";
+    var left = offset.left - (width/10);
+
+
+    if (left < 20){
+        console.log("sss");
+        left =20;
+    }
+    left+=  "px";
+    $('#thebox').css( {'position': 'absolute','top': top, 'left': left, 'width':width });
+}
+
+
+function recall(){
+
+
+    let isInside= false;
+    let isAnother= false;
+    let continueWatching = false;
+    $(".box_expand").mouseenter(function(){
+        isAnother= true;    
+        $("#thebox").addClass("hide_element");
+        continueWatching = this.children[0].id !== this.children[0].id.replace("continue_warching","");
+
+        prepareDescriptionBox(this);
+        setTimeout(function(){
+            $("#thebox").removeClass("hide_element");
+        },100);
+    });
+
+    $(".box_expand").mouseleave(function(){
+        isAnother= false;    
+
+        setTimeout( function(){
+            if( (!isInside) && (!isAnother)){
+                $("#thebox").addClass("hide_element");
+            } 
+        }, 100);
+
+    });
+
+
+   
+    $("#thebox").mouseenter(function(){
+        isInside= true;
+        let continue_w = this.children[0].children[0].children[1];
+        if (continueWatching){
+            $(continue_w).removeClass("hide_element");  
+        }
+        else
+            $(continue_w).addClass("hide_element");  
+
+    });
+
+    $("#thebox").mouseleave(function(){
+        isInside= false;
+        $("#thebox").addClass("hide_element");
+    });
+
+}
+
+
+
 $("#filter_all").click(function(){
     filterItems("all","searchList");
+    recall();
     $("#filter_all").addClass("active_filter");
     $("#filter_ss").removeClass("active_filter");
     $("#filter_sm").removeClass("active_filter");    
@@ -216,6 +230,7 @@ $("#filter_all").click(function(){
 
 $("#filter_ss").click(function(){
     filterItems("s","searchList");
+    recall();
     $("#filter_all").removeClass("active_filter");
     $("#filter_ss").addClass("active_filter");
     $("#filter_sm").removeClass("active_filter");    
@@ -223,10 +238,12 @@ $("#filter_ss").click(function(){
 });
 
 $("#filter_sm").click(function(){
-    filterItems("m","searchList");   
+    filterItems("m","searchList"); 
+    recall();  
     $("#filter_all").removeClass("active_filter");
     $("#filter_ss").removeClass("active_filter");
     $("#filter_sm").addClass("active_filter");    
 
 });
 
+recall();  

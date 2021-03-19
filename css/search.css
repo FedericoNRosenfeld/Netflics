@@ -27,12 +27,17 @@
     margin-bottom: 1%;
 }
 
-.video_img{
+.loadData{
+    position: relative;
+}
+
+.video{
+    position: relative;
+    float: left;
     width: 250px ; 
-    height: auto; 
+    height: 200px; 
     margin-bottom: 3%;
-    border: solid 4px rgb(235, 140, 15);
-   
+    margin: 1%;
 }
 
 .video_container{
@@ -42,71 +47,14 @@
     margin-bottom: 2%;
 }
 
-@media(min-width: 500px ){
-    .generatePreview{
-        transition: .4s;
-        transform: scale(1.2);
-     } 
-
-    
-}
-
-
-@media(max-width: 550px ){
-    .generatePreview{
-        transition: .4s;
-        transform: scale(1.2);
-     } 
-}
-@media(max-width: 400px) {
-    
- .generatePreview{
-    transition: .3s;
-    transform: scale(1.1) ;
- } 
-   
-}
-
-.video_ctrl{
-    z-index: 1;
-    position: absolute;
-    overflow: auto;   
-    top: 90%;
-    width: 100%;
-    font-size: 30px;
-    background: rgba(36, 23, 3, 1);
-    border-left: solid 4px orange;
-    border-right: solid 4px orange;
-    color: white;
-   
-}
-
- .video_desc{
-    z-index: 2;
-    position: absolute;
-    float: left;
-    overflow: auto;
-    padding-left: 4%;
-    padding-right: 4%;
-    top: 116%;
-    max-width: 100%;
-    height: 100px;
-    font-size: 10px;
-    background: rgba(36, 23, 3, 1);
-    border: solid 4px orange;
-    border-top: 0 transparent;
-    color: white;
-
- }
 
  .relatedTitles_container ul{
      margin:0;
      padding: 0%;
  }
 
- .generatePreview .video_img{
-    content:url("../images/presentations/video_trailer.png")
-
+ .generatePreview .video_img, .generatePreview .video_img_a{
+    content:url("../images/presentations/video_trailer.png");
  }
 
 
@@ -118,3 +66,6 @@
  .active_filter{
     color: orange;     
  }
+
+
+ .searchList{}

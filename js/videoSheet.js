@@ -118,3 +118,13 @@ $(".star_form").mouseleave(function(){
     $("#"+ star).removeClass("shake"); 
 });
 
+$("#addList_btn1" ).click( function(){
+    $("#addList_btn1").toggleClass("hide_element");
+    $("#addList_btn2").toggleClass("hide_element");
+});
+
+$("#addList_btn2" ).click( function(){
+    $("#addList_btn1").toggleClass("hide_element");
+    $("#addList_btn2").toggleClass("hide_element");
+});
+
