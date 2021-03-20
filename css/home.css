@@ -25,7 +25,6 @@
 
 }
 
-
 .promo_container{
     margin-top:30px ;
     position: relative;
@@ -104,8 +103,7 @@
 
 
 .videos_carousel_container{
-    margin-left: 2%;
-    margin-right: 2%;
+  
 }
 
 
@@ -152,7 +150,6 @@
 .videos-recomendadas .contenedor-principal{
     position: relative;
     align-items: center;
-    display: flex; /* arrows and videos one next to the other */
 }
 
  .contenedor-carousel{
@@ -264,7 +261,7 @@
     border: none;
     background: rgba(0, 0, 0, 0.4);
     font-size: 30px;
-    height: 90%;
+    height: 100%;
     top: 5%;
     line-height: 30px;
     width: 50px;
@@ -292,3 +289,12 @@
     right: 0;
 }
 /*#endregion arrows carousel */
+
+
+.section_container{
+    background-image: linear-gradient(to bottom, black, black, black, black,  rgb(235, 140, 15));
+}
+
+.contenedor-titulo-controles{
+    margin-left: 10px;
+}
