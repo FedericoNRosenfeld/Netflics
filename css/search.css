@@ -2,7 +2,7 @@
 
 .searchResult_container{
     color: white;
-    margin: 2%;
+    margin: 25px;
     margin-top: 70px;
 }
 
@@ -13,18 +13,14 @@
 
 }
 
-
-.related_title{
-    font-size: 14px;
-}
 .tx_orange{
     color: rgb(235, 140, 15);
 }
 
 .videos_list{
-    padding-top: 1%;
-    vertical-align: middle;
-    margin-bottom: 1%;
+    padding-top: 15px;
+
+    margin-bottom: 15px;
  
 }
 
@@ -37,17 +33,17 @@
     float: left;
     width: 250px ; 
     height: 200px; 
-    margin-bottom: 3%;
-    margin: 1%;
+    margin-bottom: 25%;
+    margin: 15px;
 }
 
 .video_container{
-    margin:1%;
+    margin:15px;
     flex: 1 ;
 
 } 
 .recomendation_text{
-    margin-bottom: 2%;
+    margin-bottom: 25px;
 }
 
 
@@ -62,8 +58,8 @@
 
 
  .filter{
-     margin-top: 2%;
-     margin-left: 1%;
+     margin-top: 20px;
+     margin-left: 15px;
  }
 
  .active_filter{

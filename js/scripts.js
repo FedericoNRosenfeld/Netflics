@@ -201,6 +201,11 @@ $(".btn_list_addremove").click(function(){
 
 });
 
+$(".btn_fav").click(function(){
+    $(".btn_fav").toggleClass("red_color");
+    $(".btn_fav").toggleClass("hide_element");
+
+});
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });

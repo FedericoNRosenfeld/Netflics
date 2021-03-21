@@ -30,7 +30,7 @@ function makeRelatedList(search_word) {
     let sr = document.createElement('li');
     sr.className = "inLine ";
     sr.innerHTML = "Titulos relacionados con tu busqueda: ";
-    sr.style = "color: grey"
+    sr.style = "color: grey; font-size: 18px"
     listElement.appendChild(sr);
 
     for (let i = 0; i < listData.length; ++i) {
@@ -42,7 +42,7 @@ function makeRelatedList(search_word) {
         // Add element from list to a linkeable item>
         let link = document.createElement('a');
         link.innerHTML = search_word +" "+ listData[i]; 
-        link.className = "related_title inLine link_style nav-link";
+        link.className = "related_title inLine textAuto link_style nav-link";
         link.href= "#"
 
         let container = document.createElement('div');

@@ -147,7 +147,9 @@ p{
 }
 
 
-
+.red_color{
+    color: rgb(227,27,35)  !important;
+}
 
 .icon_navbar_m{
     height: 32px;
@@ -451,10 +453,9 @@ p{
     width: 20%;
     border-top: solid 5px  rgba(235, 140, 15,.2);
     border-bottom: solid 5px  rgba(235, 140, 15,.2);
-    opacity: 0;
     transition: opacity .3s ease-out;
-  background-image: linear-gradient(to right, black,  black, black, rgb(235, 140, 15), black, black, black);
-
+    opacity: 0;
+    background-image: linear-gradient(to right, black,  black, black, rgb(235, 140, 15), black, black, black);
 }
 .video_extra_data:hover{
     opacity: 1;
@@ -494,6 +495,7 @@ p{
     margin-left: 10%;
     margin-right: 10%;
     height:4px;
+    margin-top: 10px;
 }
 
 
