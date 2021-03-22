@@ -125,6 +125,8 @@
     bottom: -10px;
     right: 1%;
     margin-right: 1%;
+    margin-bottom: 5px;
+
 }
 .indicadores .btn_page_indicator{
     background: white;
@@ -169,14 +171,29 @@
  } 
 
 
+ @media(min-width:1801px){
+    /* 8 and half*/ 
+    .carousel .video{
+        width: 11.76%;
+        min-width: 11.76% ;
+     }    
+}
 
 
 
-@media(min-width:1100px){
+ @media(max-width:1800px){
+    /* 7 and half*/ 
+    .carousel .video{
+        width: 13.33%;
+        min-width: 13.33% ;
+     }    
+}
+
+@media(max-width:1500px){
     /* 6 and half*/
     .carousel .video{
-        width: 16%;
-        min-width: 16% ;
+        width: 15.38%;
+        min-width: 15.38% ;
 
      }    
 }
@@ -185,8 +202,8 @@
 @media(max-width:1100px){
     /* 5 and half*/
     .carousel .video{
-        width: 18.5%;
-        min-width: 18.5% ;
+        width: 18.18%;
+        min-width: 18.18% ;
  
      }
      .arrow-left,  .arrow-right{
@@ -199,8 +216,8 @@
 @media(max-width:850px){
     /* 4 and half*/
     .carousel .video{
-        width: 23.5%;
-        min-width: 23.5% ;      
+        width: 22.22%;
+        min-width: 22.22% ;      
      } 
      .arrow-left,  .arrow-right{
         width: 30px !important;
@@ -213,8 +230,8 @@
 @media(max-width:600px){
     /* 3 and half*/
     .carousel .video{
-        width: 30.8%;
-        min-width: 30.8% ;     
+        width: 28.57%;
+        min-width: 28.57% ;     
      } 
      .arrow-left,  .arrow-right{
         width: 30px !important;
@@ -226,8 +243,8 @@
 @media(max-width:450px){
     /* 2 and half*/
     .carousel .video{
-        width: 48.5%;
-        min-width: 48.5% ;     
+        width: 40%;
+        min-width: 40% ;     
      } 
      .arrow-left,  .arrow-right{
         width: 30px !important;

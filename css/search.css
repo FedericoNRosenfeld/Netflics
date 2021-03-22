@@ -26,13 +26,16 @@
 
 .loadData{
     position: relative;
+    margin-left:7%; 
+    margin-right:7%; 
+
 }
 
 .video{
     position: relative;
     float: left;
     width: 250px ; 
-    height: 200px; 
+    height: 150px; 
     margin-bottom: 25%;
     margin: 15px;
 }

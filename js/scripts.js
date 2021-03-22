@@ -64,7 +64,7 @@ function makeListOfVideos(i, id,newSerie) {
 
     let gender = videoType[Math.floor(Math.random() * 2)]
     let dgen = document.createElement('div');
-    dgen.className = "video box_expand "; 
+    dgen.className = "video box_expand"; 
     dgen.id = "num"+ i+"_"+id+"_" +gender;
 
     

@@ -42,6 +42,8 @@
             <img id="usr_img" class="icon-base-size" src="images/user_profile_empty.png" alt="Usuario" >                                             
         </a>                                              
         <span>User1</span>
+        <a href="subPages/series_movies.html?type=series" style="font-size: 14px ;">Cambair Perfil</a>
+
         <div class="dropdown-divider "></div>
 
         <a href="subPages/series_movies.html?type=series">Series</a>
@@ -171,6 +173,9 @@
                                 <button type="button" class="video_btn_sm rounded-circle hide_element addList_btn2" data-toggle="tooltip" data-placement="top" id="addList_btn2" title="Remover de mi lista">
                                     <span class=""><ion-icon class="icon_menu_mg" name="remove"></ion-icon></span>
                                 </button>
+                                <button type="button" class="video_btn_sm rounded-circle " data-toggle="tooltip" data-placement="top" id="addList_btn2" title="Ver mas informacion">
+                                    <span class=""><ion-icon class="icon_menu_mg" name="information-circle"></ion-icon></span>
+                                </button>
                                 <button  type="button" class="volume_btn_sm rounded-circle" id="audio_btn"> 
                                     <span class=" "><ion-icon name="volume-mute"></ion-icon> </span>
                                 </button> 
@@ -215,7 +220,14 @@
                             <span style="margin-top:3px" id="addList_btn_text">Remover de mi lista </span>
                         </div>                     
                     </button>
-
+                    <button  class="btn btn_video btn_white_trans" id="info_btn_d"> 
+                        <div class="input-group ">
+                            <div class="input-group-prepend">
+                                <span class=" icon_btn_top"><ion-icon name="information-circle"></ion-icon></span>
+                            </div>
+                            <span style="margin-top:3px">Mas informacion </span>
+                        </div>
+                    </button>
                     <button  class="volume_btn rounded-circle btn_white_trans" id="audio_btn"> 
                         <span class=" "><ion-icon name="volume-mute"></ion-icon> </span>
                     </button>

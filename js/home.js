@@ -75,7 +75,7 @@ leftArrows.forEach(arrow => {
         let filaId =  "contenedor-carousel_"+id;
         
 
-        document.getElementById(filaId).scrollLeft-=  document.getElementById(filaId).offsetWidth
+        document.getElementById(filaId).scrollLeft-=   ( document.getElementById(filaId).offsetWidth - ($('.video').width() /1.7))
  
     
         let indicatorActivo = document.querySelector("#indicadores_"+id+" .active");
@@ -92,7 +92,10 @@ rightArrows.forEach(arrow => {
     document.getElementById(arrow.id).addEventListener("click", function(){
         let id =  arrow.id.replace("arrow_right_", "")
         let filaId =  "contenedor-carousel_"+id;
-        document.getElementById(filaId).scrollLeft +=  document.getElementById(filaId).offsetWidth
+        console.log("tryV:"+ $('.video').width());
+
+
+        document.getElementById(filaId).scrollLeft +=  ( document.getElementById(filaId).offsetWidth - ($('.video').width() /1.7))
         
         let indicatorActivo = document.querySelector("#indicadores_"+id+" .active");
         if (indicatorActivo.nextSibling){
@@ -119,8 +122,11 @@ function  getSizeBtnPageCarousel(elements){
         case (screen.width < 1101):
             pages_amount = Math.ceil(elements / 5);
             break;
-        default:
+        case (screen.width < 1501):
             pages_amount = Math.ceil(elements / 6);
+            break;
+        default:
+            pages_amount = Math.ceil(elements / 7);
     }
 }
 
@@ -205,10 +211,14 @@ function  prepareDescriptionBox(element){
     width+= width/3;
     let top = offset.top  + "px";
     var left = offset.left - (width/10);
+    var right = offset.left  + width ;
 
-
+   
     if (left < 20){
         left =20;
+    }
+    if (right > window.innerWidth){
+        left=  window.innerWidth - width - 10;
     }
     left+=  "px";
     $('#thebox').css( {'position': 'absolute','top': top, 'left': left, 'width':width });
