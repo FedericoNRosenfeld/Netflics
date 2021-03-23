@@ -7,13 +7,11 @@ document.getElementById("search_desk").addEventListener( "keydown", function( e 
     if (keyCode == 'Enter'){
         if ((window.location.href.includes('subPages'))){
             window.location.href = "searchResult.html?search="+document.getElementById("search_desk").value ;
-            console.log("Im here and going to :"+window.location.href );
 
 
         }
         else{
             window.location.href = "subPages/searchResult.html?search="+document.getElementById("search_desk").value ;
-            console.log("Im banana and going to :"+window.location.href );
 
 
         }
@@ -27,13 +25,11 @@ document.getElementById("search_mobile_bar").addEventListener( "keydown", functi
     if (keyCode == 'Enter'){
         if ((window.location.href.includes('subPages'))){
             window.location.href = "searchResult.html?search="+document.getElementById("search_desk").value ;
-            console.log("Im here and going to :"+window.location.href );
 
 
         }
         else{
             window.location.href = "subPages/searchResult.html?search="+document.getElementById("search_desk").value ;
-            console.log("Im banana and going to :"+window.location.href );
 
 
         }

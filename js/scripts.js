@@ -119,7 +119,8 @@ function makeCarousel( id, title, elementsAmount, continueWatching, url) {
     let title1 = document.createElement('a');
     title1.className = "carousel_title"; 
     title1.id = "carousel_title_"+title+"_"+id;
-    title1.href = "#";
+
+    title1.href = window.location.href.includes('subPages') ? "series_movies_category.html?search="+title : "subPages/series_movies_category.html?search="+title;
     title1.innerHTML = title
 
     let div3 = document.createElement('div');
@@ -176,27 +177,7 @@ function makeCarousel( id, title, elementsAmount, continueWatching, url) {
 
     document.getElementById(id).appendChild(div1);
 }
-
-
-/*<div class="videos-recomendadas contenedor videos_carousel_container">
-        <div class="contenedor-titulo-controles">
-            <h4 class="carousel_title">Series Recomendadas</h4>
-            <div class="indicadores"></div>
-        </div>
-        <div class="contenedor-principal">
-            <button role="button" id="arrow_left" class="arrow-left arrow-btn"><ion-icon name="chevron-back-outline"></ion-icon></button>
-            <div class="contenedor-carousel">
-                <div class="carousel" id="acategory"> 
-
-                </div>           
-            </div>
-            <button role="button" id="arrow_right" class="arrow-right arrow-btn"><ion-icon name="chevron-forward-outline"></ion-icon></button>
-          
-        </div>
-    </div>
-*/ 
-//document.getElementsByTagName("BUTTON").setAttribute("type", "button");
-    
+ 
 $(".btn_list_addremove").click(function(){
     $(".btn_list_addremove").toggleClass("hide_element");
 

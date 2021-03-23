@@ -21,7 +21,9 @@ p{
         display: block;
         font-size: 18px;
     }
-
+    .sidenav{
+        width: 0 !important;
+    }
     .logo_top_center{
         display: none;
     }
