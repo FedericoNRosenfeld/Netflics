@@ -2,7 +2,7 @@
 
 var goNext = false;
 var isPaused = false;
-var videoTime= 300; // In seconds
+var videoTime= 5; // In seconds
 var currentTime = 0; // In seconds
 var isLoading= true;
 
@@ -22,7 +22,7 @@ setTimeout(
     function(){
         removeLoading()
         update_progressbar();   
-    }, 5000);
+    }, 2000);
     
 }
 
@@ -47,9 +47,8 @@ function update_progressbar(){
            if(!isPaused){
                 if (currentTime >= videoTime) {
                     clearInterval(progress);
-                    document.getElementById("endVideoSection").classList.remove("hide_element");
-                    document.getElementById("videoScene").classList.add("hide_element");
-    
+                    document.getElementById("comment_box_container").classList.remove("hide_element");
+
                 } else {
                     currentTime++; 
                     progressbar.style.width = ( currentTime * 100 / videoTime ) + '%';
@@ -60,7 +59,6 @@ function update_progressbar(){
             } else{
                 if(goNext){
                     clearInterval(progress);
-                    document.getElementById("videoScene").classList.add("hide_element");
                     document.getElementById("loadingVideoScene").classList.remove("hide_element");
                 }            
             }

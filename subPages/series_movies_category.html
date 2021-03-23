@@ -9,6 +9,8 @@
   <!-- Bootstrap -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/styles.css" rel="stylesheet">
+  <link href="../css/search.css" rel="stylesheet">
+
   <link href="../css/home.css" rel="stylesheet">
   <link href="../css/series_movies.css" rel="stylesheet">
 
@@ -43,7 +45,7 @@
             <img id="usr_img" class="icon-base-size" src="../images/user_profile_empty.png" alt="Usuario" >                                             
         </a>                                              
         <span>User1</span>
-        <a href=" #" style="font-size: 14px ;">Cambiar Perfil</a>
+        <a href=" #" style="font-size: 14px ;">Cambiar Perfil</a>        
         <div class="dropdown-divider "></div>
 
         <a href="series_movies.html?type=series">Series</a>
@@ -63,19 +65,19 @@
     <nav class="navbar navbar_desktop navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xl">
         <div class="container remove_empty_spaces " >
             <!-- Icono modificado de: https://www.flaticon.es/-->
-            <a class="navbar-brand link_style" href="#"><img src="../images/logo.png" alt="Netflics" ></a>
+            <a class="navbar-brand link_style" href="../home.html"><img src="../images/logo.png" alt="Netflics" ></a>
     
             <div class="collapse navbar-collapse" >
                 <ul class="navbar-nav mr-auto">
                     <!-- mr-auto botones lado izquierdo, ml-auto botones lado derecho-->
                     <li class="nav-item item-space active">
-                    <a id="nav_Home" class="nav-link link_style textAuto" href="../home.html">Inicio <span class="sr-only">(current)</span></a>
+                    <a id="nav_Home" class="nav-link link_style textAuto" href="../home.html">Inicio</a>
                     </li>
                     <li class="nav-item item-space">
-                    <a id="nav_Series" class="nav-link link_style textAuto" href="searchResult.html">Series</a>
+                    <a id="nav_Series" class="nav-link link_style textAuto" href="series_movies.html">Series</a>
                     </li>
                     <li class="nav-item item-space">
-                    <a id="nav_videos" class="nav-link link_style textAuto" href="searchResult.html">Peliculas</a>
+                    <a id="nav_videos" class="nav-link link_style textAuto" href="series_movies.html">Peliculas</a>
                     </li>
                     <li class="nav-item item-space">
                     <a id="nav_favoritos" class="nav-link link_style textAuto" href="#">Mis Listas</a>
@@ -98,13 +100,13 @@
                                 <div id="myDropdown" class="dropdown-content">
                                     <div class="user_ctrl_box center">
                                         <div class="user_dropdown_menu">
-                                            <a class="icons-li   " href="#">
+                                            <a class="icons-li   " href="../home.html">
                                                 <img id="usr_img" class="icon-base-size" src="../images/user_profile_empty.png" alt="Usuario" >
                                                 <span>User1</span>                                          
                                             </a>
                                         </div>
                                         <div class="user_dropdown_menu">
-                                            <a class="icons-li   " href="#">
+                                            <a class="icons-li   " href="../home.html">
                                                 <img id="usr_img" class="icon-base-size" src="../images/user_profile_empty.png" alt="Usuario" >
                                                 <span>User2</span>                                          
                                             </a>                                           
@@ -155,7 +157,10 @@
         <div class="page_section_container">
             <div class="page_section_box">
                 <div class="page_section_title_box">
-                    <h1 class="page_section_title"> Series <span id="video_type_title"></span></h1>
+                    <h1 class="page_section_title"> Series </h1>
+                </div>
+                <div class="filter_text_box">
+                    <span id="search_word" class="filter_text"></span>
                 </div>
                 <div class="split_elements_t " ></div>
                 <div class="page_filter_box">
@@ -298,16 +303,17 @@
 
 
 <div style="margin-bottom: 50px">
-    <div class="section_container" id="continue_warching"></div>
-    <div class="section_container" id="recomended_4u"></div>
-    <div class="section_container" id="oldViernes_sct"></div>
-
-    <div class="section_container" id="action_sct"></div>
-    <div class="section_container" id="drama_sct"></div>
-    <div class="section_container" id="anime_sct"></div>
+    <div class=" videos_list   icons-li  center " id="">    
+        <div id="searchList" class="d-flex justify-content-around">     
+        </div>
+        <div class="center hide_element" id="recomendedList"> </div>
+        <div class="center hide_element" id="fridayList"> </div>               
+               
+        
+    </div>  
 
 </div>
-    
+   <div class="relatedTitles_container hide_element"></div> 
 
     <div class="empty_bottom_space" id="bottom_space">.</div>
 
@@ -349,10 +355,10 @@
 
     <!-- custom script -->
     <script src="../js/scripts.js"></script>
-    <script src="../js/series-movies-screen.js"></script>
     <script src="../js/carousel_videos.js"></script>
-
+    <script src="../js/search.js"></script>
     <script src="../js/navbar.js"></script>
+   
 
 
     <!--IonicIcons https://ionicons.com/usage -->

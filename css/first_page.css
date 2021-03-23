@@ -3,7 +3,6 @@
 /* general content */
 body{
     font-family: 'Lato', sans-serif;    
-
     background: linear-gradient(to right, black, black,   rgb(235, 140, 15));
     -webkit-background-size: cover;
     background-size:cover;
@@ -83,7 +82,7 @@ body{
     font-size: 12px;
     border: 1px solid; 
     border-radius: 8px;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 .btn_reg{

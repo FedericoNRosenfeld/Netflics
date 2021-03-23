@@ -1,0 +1,74 @@
+
+
+
+.page_section_container{
+    position: relative;
+    color: white;
+    margin-top: 80px;
+    margin-left: 30px;
+    display: inline-block;
+
+}
+
+.page_section_title_box{
+
+
+}
+.page_section_box{
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5),  rgba(0, 0, 0, .5),   rgb(235, 140, 15));
+    border-radius: 10px;
+    padding-right: 5px;
+}
+
+
+.blured_background{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, .9),  rgba(0, 0, 0, .2),rgba(0, 0, 0, 0)),
+     url('../images/presentations/movie_big2.png');
+     background-position:right top;
+     background-repeat: no-repeat;
+     filter: blur(5px); 
+}
+
+.top_box{
+    z-index: 1;
+}
+
+.data_container{
+    margin:0 !important ;
+}
+
+.filter_text_box{
+    margin-top: 17px;
+    margin-left:10px ;
+
+}
+
+.split_elements_t{
+    height: 30px;
+    margin: 10px;
+    border: solid .5px orange;
+}
+
+.filter_options_container{
+    
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.filter_options_box{
+
+}
+.filter_options_box a{
+    color: white;
+
+}
+
+

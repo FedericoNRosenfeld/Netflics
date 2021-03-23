@@ -1,23 +1,7 @@
-$("#search_desk").on("keypress", function (e) {
-    console.log("jquery:"+ e.keyCode);
-});
 
-
-document.getElementById("search_desk").addEventListener( "keydown", function( e ) {
-    console.log("document:"+ e.code);
-
-        var keyCode = e.code;
-      
-        if (keyCode == 'Enter'){
-            window.location.href = "subPages/searchResult.html?search="+document.getElementById("search_desk").value ;
-        }
-});  
-
-document.getElementById("search_icon_mobile").addEventListener('click', function(e) {
-    console.log(document.getElementById("search_mobile_screen").classList);
-        $("#search_mobile_screen" ).toggleClass("hide_element");  
-        console.log(document.getElementById("search_mobile_screen").classList);
-    });
-    
-
-
+makeCarousel( "continue_warching", "Continuar viendo", 20, "", "");
+makeCarousel( "recomended_4u", "Recomendados para vos", 20, "hide_element", "");
+makeCarousel( "oldViernes_sct", "Populares del viernes pasado", 20, "hide_element", "");
+makeCarousel( "action_sct", "Accion", 20, "hide_element", "");
+makeCarousel( "drama_sct", "Drama", 20, "hide_element", "");
+makeCarousel( "anime_sct", "Anime", 20, "hide_element", "");
