@@ -56,7 +56,7 @@ let listData = ['m','s'];
 
 
 // Video items generator 
-function makeListOfVideos(i, id,newSerie) {
+function makeListOfVideos(i, id,newSerie,url) {
  
 
     // Make the list
@@ -70,7 +70,7 @@ function makeListOfVideos(i, id,newSerie) {
     
     let img = document.createElement('img');
     img.className = "video_img_a";
-    img.src="images/presentations/"+gender +""+( Math.floor(Math.random() * 7)) +".png";
+    img.src=url+"images/presentations/"+gender +""+( Math.floor(Math.random() * 7)) +".png";
     img.id = "video_img_"+i +"_"+id+"_" + gender;
 
 
@@ -82,20 +82,20 @@ function makeListOfVideos(i, id,newSerie) {
 
 }
 
-function generateFreeContent( totalElements, id, hide ){
+function generateFreeContent( totalElements, id, hide,url ){
     for (let i = 0; i < totalElements; i++){
-        document.getElementById(id).appendChild(makeListOfVideos(i, id, hide));
+        document.getElementById(id).appendChild(makeListOfVideos(i, id, hide,url));
     }
 }
 
-function generateContent( totalElements, id, hide ){
+function generateContent( totalElements, id, hide, url ){
    
     let div6 = document.createElement('div');
     div6.className = "carousel";
     div6.id = "data_"+id;
 
     for (let i = 0; i < totalElements; i++){
-        div6.appendChild(makeListOfVideos(i, id, hide));
+        div6.appendChild(makeListOfVideos(i, id, hide, url));
     }
     return div6;
 }
@@ -103,7 +103,7 @@ function generateContent( totalElements, id, hide ){
 
 
 
-function makeCarousel( id, title, elementsAmount, continueWatching) {
+function makeCarousel( id, title, elementsAmount, continueWatching, url) {
  
 
  // Carousel top
@@ -116,9 +116,10 @@ function makeCarousel( id, title, elementsAmount, continueWatching) {
     div2.className = "contenedor-titulo-controles"; 
     div2.id = "carousel_title_container_"+id;
 
-    let title1 = document.createElement('h4');
+    let title1 = document.createElement('a');
     title1.className = "carousel_title"; 
     title1.id = "carousel_title_"+title+"_"+id;
+    title1.href = "#";
     title1.innerHTML = title
 
     let div3 = document.createElement('div');
@@ -165,7 +166,7 @@ function makeCarousel( id, title, elementsAmount, continueWatching) {
     btn_l.appendChild(icon_l);
     btn_r.appendChild(icon_r);
     
-    div5.appendChild(generateContent(elementsAmount, id, continueWatching));
+    div5.appendChild(generateContent(elementsAmount, id, continueWatching, url));
 
     div4.appendChild(btn_l);
     div4.appendChild(div5);

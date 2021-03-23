@@ -170,6 +170,11 @@
      flex-wrap:nowrap /* videos in line */
  } 
 
+ .carousel_title{
+     cursor: pointer;
+     font-size: 24px;
+     text-decoration: none !important;
+    }
 
  @media(min-width:1801px){
     /* 8 and half*/ 
