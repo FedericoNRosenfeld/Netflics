@@ -10,6 +10,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/home.css" rel="stylesheet">
+  <link href="css/carousel.css" rel="stylesheet">
 
   <link href="css/videoSheet.css" rel="stylesheet">
 
@@ -271,8 +272,14 @@
                 </div>
             </div>
         
-            <div class="right_box_video " id="resume_episodes_box">
+            <div class="right_box_video" id="resume_episodes_box">
+                    
                 <div class="video_description">
+                    <h6 class=""> Titulo video </h6>
+                    <div class="video_calification">
+                        <span class="video_star_value">4</span>                                     
+                        <span class="video_iconStar " ><ion-icon name="star"  class="calification_star calification_star_move"></ion-icon>
+                    </div> 
                     <p class=""> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ducimus maxime consectetur cum laborum aperiam explicabo? Iusto consequuntur numquam facere alias.  Voluptatem velit atque quas necessitatibus accusantium vero. Sequi, possimus?</p>
                 </div>       
             </div>    
@@ -284,7 +291,75 @@
     <div class="section_container" id="continue_warching"></div>
     <div class="section_container" id="recomended_4u"></div>
     <div class="section_container" id="oldViernes_sct"></div>
-
+    <div class="container-fluid friday_box">
+        <div class="row presentation">
+            <div class="col-lg-3 col-md-4 col-sm-6">   
+                
+                <div class="message_friday" style="color: white;">
+                    <h3> No dejes que los viernes sean un dia mas. Los viernes en Netflics son para disfrutar junto a la mejor  calidad de series y peliculas </h3>   
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12">   
+                <div class="carousel_newStuff">   
+    
+                    <div class="slideshow-container">
+    
+                        <div class="mySlides fade">
+                                <img src="images/carousel/bm1.jpg" style="width:100%" alt="video">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <img src="images/carousel/bm2.jpg" style="width:100%">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <img src="images/carousel/bs1.jpg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides fade">
+                          <img src="images/carousel/bs2.jpg" style="width:100%">
+                        </div>
+    
+                        <div class="controls_video_friday">
+                            <div class=" ">
+                                    <button type="button" class="video_btn_sm rounded-circle  " data-toggle="tooltip" data-placement="top"  id="play_btn">
+                                        <span class=" "><ion-icon class="icon_menu_mg"name="play"></ion-icon></span>
+                                    </button>
+                                
+                                    <button type="button" class="video_btn_sm rounded-circle addList_btn1" data-toggle="tooltip" data-placement="top" id="addList_btn1" title="Agregar a lista">
+                                        <span class=""><ion-icon class="icon_menu_mg"name="add"></ion-icon></span>
+                                    </button>
+                
+                                    <button type="button" class="video_btn_sm rounded-circle hide_element addList_btn2" data-toggle="tooltip" data-placement="top" id="addList_btn2" title="Remover de mi lista">
+                                        <span class=""><ion-icon class="icon_menu_mg" name="remove"></ion-icon></span>
+                                    </button>
+                                    <button type="button" class="video_btn_sm rounded-circle " data-toggle="tooltip" data-placement="top" id="addList_btn2" title="Ver mas informacion">
+                                        <span class=""><ion-icon class="icon_menu_mg" name="information-circle"></ion-icon></span>
+                                    </button>
+                                    <button  type="button" class="volume_btn_sm rounded-circle" id="audio_btn"> 
+                                        <span class=" "><ion-icon name="volume-mute"></ion-icon> </span>
+                                    </button>                 
+                            </div>      
+                        </div>  
+                        <div style="text-align:center ">
+    
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+    
+                        </div>
+    
+                        <a class="prev" onclick="plusSlides(-1)"><ion-icon name="chevron-back-outline"></ion-icon></a>
+                        <a class="next" onclick="plusSlides(1)"><ion-icon name="chevron-forward-outline"></ion-icon></a>
+                      
+                      </div>
+                      
+                    
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="section_container" id="action_sct"></div>
     <div class="section_container" id="drama_sct"></div>
     <div class="section_container" id="anime_sct"></div>
@@ -334,6 +409,7 @@
     <script src="js/scripts.js"></script>
     <script src="js/home.js"></script>
     <script src="js/carousel_videos.js"></script>
+    <script src="js/carousel.js"></script>
 
     <script src="js/navbar.js"></script>
 

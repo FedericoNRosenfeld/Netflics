@@ -20,6 +20,21 @@
     }
   }
 
+  @media screen and (max-width: 400px) {
+    .calification_box{
+        padding: none !important;
+
+    }
+   
+   
+}
+
+.calification_box{
+    flex: 0 0 auto;
+
+}
+
+
 .videoSheet_container{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -251,8 +266,8 @@
     max-width: 80%; 
 }
 
-.comment_img_box{
-
+.calification_box{
+    
 }
 .comment_title{
     position: relative;

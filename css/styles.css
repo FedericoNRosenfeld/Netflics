@@ -493,9 +493,9 @@ p{
     color: white;
     font-size: 28px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
+
 }
 
 .watched_container{
@@ -546,10 +546,38 @@ p{
     color: white;
     overflow: auto;
     max-height: 200px;
+    
 
  }
 
 
 .icon_btn_crtl{
     cursor: pointer;
+}
+
+.video_calification{
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.video_star_value{
+    color: white;
+}
+
+.friday_box{
+    margin-top: 61px;
+    margin-bottom: 61px;
+
+    background-image: linear-gradient(to bottom, black, black,   rgb(235, 140, 15));
+}
+.controls_video_friday{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+.carousel_newStuff{
+    background-image: none !important;
 }
