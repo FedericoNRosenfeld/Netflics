@@ -564,3 +564,20 @@ p{
     color: white;
 }
 
+.friday_box{
+    margin-top: 61px;
+    margin-bottom: 61px;
+
+    background-image: linear-gradient(to bottom, black, black,   rgb(235, 140, 15));
+}
+.controls_video_friday{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+
+.carousel_newStuff{
+    background-image: none !important;
+}
