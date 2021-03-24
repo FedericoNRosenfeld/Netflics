@@ -493,9 +493,9 @@ p{
     color: white;
     font-size: 28px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
+
 }
 
 .watched_container{
@@ -546,6 +546,7 @@ p{
     color: white;
     overflow: auto;
     max-height: 200px;
+    
 
  }
 
@@ -553,3 +554,13 @@ p{
 .icon_btn_crtl{
     cursor: pointer;
 }
+
+.video_calification{
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.video_star_value{
+    color: white;
+}
+
