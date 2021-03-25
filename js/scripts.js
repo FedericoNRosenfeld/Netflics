@@ -120,7 +120,7 @@ function makeCarousel( id, title, elementsAmount, continueWatching, url) {
     title1.className = "carousel_title"; 
     title1.id = "carousel_title_"+title+"_"+id;
 
-    title1.href = window.location.href.includes('subPages') ? "series_movies_category.html?search="+title : "subPages/series_movies_category.html?search="+title;
+    title1.href = window.location.href.includes('subpages') ? "series_movies_category.html?search="+title : "subpages/series_movies_category.html?search="+title;
     title1.innerHTML = title
 
     let div3 = document.createElement('div');

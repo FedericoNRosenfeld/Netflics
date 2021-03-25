@@ -5,13 +5,13 @@ document.getElementById("search_desk").addEventListener( "keydown", function( e 
     var keyCode = e.code;
   
     if (keyCode == 'Enter'){
-        if ((window.location.href.includes('subPages'))){
-            window.location.href = "searchResult.html?search="+document.getElementById("search_desk").value ;
+        if ((window.location.href.includes('subpages'))){
+            window.location.href = "search_result.html?search="+document.getElementById("search_desk").value ;
 
 
         }
         else{
-            window.location.href = "subPages/searchResult.html?search="+document.getElementById("search_desk").value ;
+            window.location.href = "subpages/search_result.html?search="+document.getElementById("search_desk").value ;
 
 
         }
@@ -23,13 +23,13 @@ document.getElementById("search_mobile_bar").addEventListener( "keydown", functi
     var keyCode = e.code;
 
     if (keyCode == 'Enter'){
-        if ((window.location.href.includes('subPages'))){
-            window.location.href = "searchResult.html?search="+document.getElementById("search_desk").value ;
+        if ((window.location.href.includes('subpages'))){
+            window.location.href = "search_result.html?search="+document.getElementById("search_desk").value ;
 
 
         }
         else{
-            window.location.href = "subPages/searchResult.html?search="+document.getElementById("search_desk").value ;
+            window.location.href = "subpages/search_result.html?search="+document.getElementById("search_desk").value ;
 
 
         }
